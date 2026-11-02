@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' version "${quarkusPluginVersion}"
+    id 'com.diffplug.spotless' version '8.1.0'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        name = 'Central Portal Snapshots'
+        url = 'https://central.sonatype.com/repository/maven-snapshots/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkus:quarkus-rest'
+    implementation 'io.quarkus:quarkus-rest-jackson'
+    implementation "io.littlehorse:littlehorse-quarkus:${littlehorseQuarkusVersion}"
+    implementation 'org.apache.kafka:kafka-clients:4.1.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+group = 'io.littlehorse.demo'
+version = '1.0.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+spotless {
+    java {
+        target('**/*.java')
+        palantirJavaFormat()
+    }
+}
