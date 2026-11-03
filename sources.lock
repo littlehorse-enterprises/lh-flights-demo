@@ -1,0 +1,13 @@
+littlehorse.server=1.3.0
+littlehorse.client=1.3.0
+littlehorse.quarkus=1.3.0
+littlehorse.source=https://github.com/littlehorse-enterprises/littlehorse@58a243f1a08ff15ddbfe6642474d531febc80bdf
+littlehorse-quarkus.source=https://github.com/littlehorse-enterprises/lh-quarkus@96db2f93742aa90def13ee85010e76fc2920f32d
+lh-kafka-connect.source=https://github.com/littlehorse-enterprises/lh-kafka-connect@9ea2cc6e93f30d2920c9f976a113875ffcee3cde
+lh-agent-connector.source=https://github.com/littlehorse-enterprises/lh-agent-connector@192c18ca3b282493cb7c402f291fda4034612298
+connector.build.override=-Pversion=1.3.0
+agent.build.override=-Pversion=1.3.0
+kafka=4.1.1
+quarkus.backend=3.32.3
+quarkus.agent=3.35.1
+connector.jar.sha256=91295b3901b115d2b52972d768678cf0c5d7e4f25e93f04fd316fe6f2b87ba10

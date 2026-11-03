@@ -1,0 +1,6814 @@
+[
+  {
+    "flight": {
+      "flightKey": "LH101-2026-11-05",
+      "flightNumber": "LH101",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:15:00Z",
+      "arrival": "2026-11-05T17:00:00Z",
+      "boardingCloses": "2026-11-05T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH220-2026-11-05",
+      "flightNumber": "LH220",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-05T18:05:00Z",
+      "arrival": "2026-11-05T21:50:00Z",
+      "boardingCloses": "2026-11-05T17:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH250-2026-11-05",
+      "flightNumber": "LH250",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH221-2026-11-05",
+      "flightNumber": "LH221",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-05T19:30:00Z",
+      "arrival": "2026-11-05T23:15:00Z",
+      "boardingCloses": "2026-11-05T19:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH310-2026-11-05",
+      "flightNumber": "LH310",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-05T18:30:00Z",
+      "arrival": "2026-11-05T20:50:00Z",
+      "boardingCloses": "2026-11-05T18:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH311-2026-11-05",
+      "flightNumber": "LH311",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "BOS",
+      "departure": "2026-11-05T21:45:00Z",
+      "arrival": "2026-11-05T23:50:00Z",
+      "boardingCloses": "2026-11-05T21:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH101-2026-11-06",
+      "flightNumber": "LH101",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:15:00Z",
+      "arrival": "2026-11-06T17:00:00Z",
+      "boardingCloses": "2026-11-06T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH220-2026-11-06",
+      "flightNumber": "LH220",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-06T18:05:00Z",
+      "arrival": "2026-11-06T21:50:00Z",
+      "boardingCloses": "2026-11-06T17:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH250-2026-11-06",
+      "flightNumber": "LH250",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH221-2026-11-06",
+      "flightNumber": "LH221",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-06T19:30:00Z",
+      "arrival": "2026-11-06T23:15:00Z",
+      "boardingCloses": "2026-11-06T19:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH310-2026-11-06",
+      "flightNumber": "LH310",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-06T18:30:00Z",
+      "arrival": "2026-11-06T20:50:00Z",
+      "boardingCloses": "2026-11-06T18:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH311-2026-11-06",
+      "flightNumber": "LH311",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "BOS",
+      "departure": "2026-11-06T21:45:00Z",
+      "arrival": "2026-11-06T23:50:00Z",
+      "boardingCloses": "2026-11-06T21:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1000-2026-11-05",
+      "flightNumber": "LH1000",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-05T10:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1001-2026-11-05",
+      "flightNumber": "LH1001",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "RNO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1000-2026-11-06",
+      "flightNumber": "LH1000",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-06T10:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1001-2026-11-06",
+      "flightNumber": "LH1001",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "RNO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1002-2026-11-05",
+      "flightNumber": "LH1002",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-05T16:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1003-2026-11-05",
+      "flightNumber": "LH1003",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "RNO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1002-2026-11-06",
+      "flightNumber": "LH1002",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "DEN",
+      "departure": "2026-11-06T16:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1003-2026-11-06",
+      "flightNumber": "LH1003",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "RNO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1004-2026-11-05",
+      "flightNumber": "LH1004",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "DEN",
+      "departure": "2026-11-05T08:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1005-2026-11-05",
+      "flightNumber": "LH1005",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1004-2026-11-06",
+      "flightNumber": "LH1004",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "DEN",
+      "departure": "2026-11-06T08:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1005-2026-11-06",
+      "flightNumber": "LH1005",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1006-2026-11-05",
+      "flightNumber": "LH1006",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "DEN",
+      "departure": "2026-11-05T14:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1007-2026-11-05",
+      "flightNumber": "LH1007",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1006-2026-11-06",
+      "flightNumber": "LH1006",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "DEN",
+      "departure": "2026-11-06T14:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1007-2026-11-06",
+      "flightNumber": "LH1007",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "BOS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1008-2026-11-05",
+      "flightNumber": "LH1008",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1009-2026-11-05",
+      "flightNumber": "LH1009",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1008-2026-11-06",
+      "flightNumber": "LH1008",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1009-2026-11-06",
+      "flightNumber": "LH1009",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1010-2026-11-05",
+      "flightNumber": "LH1010",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1011-2026-11-05",
+      "flightNumber": "LH1011",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1010-2026-11-06",
+      "flightNumber": "LH1010",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1011-2026-11-06",
+      "flightNumber": "LH1011",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SEA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1012-2026-11-05",
+      "flightNumber": "LH1012",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:40:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1013-2026-11-05",
+      "flightNumber": "LH1013",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:30:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1012-2026-11-06",
+      "flightNumber": "LH1012",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:40:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1013-2026-11-06",
+      "flightNumber": "LH1013",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:30:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1014-2026-11-05",
+      "flightNumber": "LH1014",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:40:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1015-2026-11-05",
+      "flightNumber": "LH1015",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:30:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1014-2026-11-06",
+      "flightNumber": "LH1014",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:40:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1015-2026-11-06",
+      "flightNumber": "LH1015",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "ORD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:30:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1016-2026-11-05",
+      "flightNumber": "LH1016",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:35:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1017-2026-11-05",
+      "flightNumber": "LH1017",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "LAX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:35:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1016-2026-11-06",
+      "flightNumber": "LH1016",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:35:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1017-2026-11-06",
+      "flightNumber": "LH1017",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "LAX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:35:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1018-2026-11-05",
+      "flightNumber": "LH1018",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:35:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1019-2026-11-05",
+      "flightNumber": "LH1019",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "LAX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:35:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1018-2026-11-06",
+      "flightNumber": "LH1018",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:35:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1019-2026-11-06",
+      "flightNumber": "LH1019",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "LAX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:35:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1020-2026-11-05",
+      "flightNumber": "LH1020",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1021-2026-11-05",
+      "flightNumber": "LH1021",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SFO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1020-2026-11-06",
+      "flightNumber": "LH1020",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1021-2026-11-06",
+      "flightNumber": "LH1021",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SFO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1022-2026-11-05",
+      "flightNumber": "LH1022",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1023-2026-11-05",
+      "flightNumber": "LH1023",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SFO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1022-2026-11-06",
+      "flightNumber": "LH1022",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1023-2026-11-06",
+      "flightNumber": "LH1023",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SFO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1024-2026-11-05",
+      "flightNumber": "LH1024",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "DEN",
+      "departure": "2026-11-05T08:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1025-2026-11-05",
+      "flightNumber": "LH1025",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "JFK",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1024-2026-11-06",
+      "flightNumber": "LH1024",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "DEN",
+      "departure": "2026-11-06T08:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1025-2026-11-06",
+      "flightNumber": "LH1025",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "JFK",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1026-2026-11-05",
+      "flightNumber": "LH1026",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "DEN",
+      "departure": "2026-11-05T14:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1027-2026-11-05",
+      "flightNumber": "LH1027",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "JFK",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1026-2026-11-06",
+      "flightNumber": "LH1026",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "DEN",
+      "departure": "2026-11-06T14:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1027-2026-11-06",
+      "flightNumber": "LH1027",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "JFK",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1028-2026-11-05",
+      "flightNumber": "LH1028",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "DEN",
+      "departure": "2026-11-05T10:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1029-2026-11-05",
+      "flightNumber": "LH1029",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "DFW",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1028-2026-11-06",
+      "flightNumber": "LH1028",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "DEN",
+      "departure": "2026-11-06T10:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1029-2026-11-06",
+      "flightNumber": "LH1029",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "DFW",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1030-2026-11-05",
+      "flightNumber": "LH1030",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "DEN",
+      "departure": "2026-11-05T16:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1031-2026-11-05",
+      "flightNumber": "LH1031",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "DFW",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1030-2026-11-06",
+      "flightNumber": "LH1030",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "DEN",
+      "departure": "2026-11-06T16:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1031-2026-11-06",
+      "flightNumber": "LH1031",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "DFW",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1032-2026-11-05",
+      "flightNumber": "LH1032",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "DEN",
+      "departure": "2026-11-05T08:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1033-2026-11-05",
+      "flightNumber": "LH1033",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MIA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1032-2026-11-06",
+      "flightNumber": "LH1032",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "DEN",
+      "departure": "2026-11-06T08:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1033-2026-11-06",
+      "flightNumber": "LH1033",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MIA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1034-2026-11-05",
+      "flightNumber": "LH1034",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "DEN",
+      "departure": "2026-11-05T14:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1035-2026-11-05",
+      "flightNumber": "LH1035",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MIA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1034-2026-11-06",
+      "flightNumber": "LH1034",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "DEN",
+      "departure": "2026-11-06T14:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1035-2026-11-06",
+      "flightNumber": "LH1035",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MIA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1036-2026-11-05",
+      "flightNumber": "LH1036",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "DEN",
+      "departure": "2026-11-05T10:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1037-2026-11-05",
+      "flightNumber": "LH1037",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MSP",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1036-2026-11-06",
+      "flightNumber": "LH1036",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "DEN",
+      "departure": "2026-11-06T10:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1037-2026-11-06",
+      "flightNumber": "LH1037",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MSP",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1038-2026-11-05",
+      "flightNumber": "LH1038",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "DEN",
+      "departure": "2026-11-05T16:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1039-2026-11-05",
+      "flightNumber": "LH1039",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MSP",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1038-2026-11-06",
+      "flightNumber": "LH1038",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "DEN",
+      "departure": "2026-11-06T16:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1039-2026-11-06",
+      "flightNumber": "LH1039",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MSP",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1040-2026-11-05",
+      "flightNumber": "LH1040",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "DEN",
+      "departure": "2026-11-05T10:10:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1041-2026-11-05",
+      "flightNumber": "LH1041",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "PHX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:00:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1040-2026-11-06",
+      "flightNumber": "LH1040",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "DEN",
+      "departure": "2026-11-06T10:10:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1041-2026-11-06",
+      "flightNumber": "LH1041",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "PHX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:00:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1042-2026-11-05",
+      "flightNumber": "LH1042",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "DEN",
+      "departure": "2026-11-05T16:10:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1043-2026-11-05",
+      "flightNumber": "LH1043",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "PHX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:00:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1042-2026-11-06",
+      "flightNumber": "LH1042",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "DEN",
+      "departure": "2026-11-06T16:10:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1043-2026-11-06",
+      "flightNumber": "LH1043",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "PHX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:00:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1044-2026-11-05",
+      "flightNumber": "LH1044",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "DEN",
+      "departure": "2026-11-05T08:45:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1045-2026-11-05",
+      "flightNumber": "LH1045",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "IAD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:25:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1044-2026-11-06",
+      "flightNumber": "LH1044",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "DEN",
+      "departure": "2026-11-06T08:45:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1045-2026-11-06",
+      "flightNumber": "LH1045",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "IAD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:25:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1046-2026-11-05",
+      "flightNumber": "LH1046",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "DEN",
+      "departure": "2026-11-05T14:45:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1047-2026-11-05",
+      "flightNumber": "LH1047",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "IAD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:25:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1046-2026-11-06",
+      "flightNumber": "LH1046",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "DEN",
+      "departure": "2026-11-06T14:45:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1047-2026-11-06",
+      "flightNumber": "LH1047",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "IAD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:25:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1048-2026-11-05",
+      "flightNumber": "LH1048",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1049-2026-11-05",
+      "flightNumber": "LH1049",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "PDX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1048-2026-11-06",
+      "flightNumber": "LH1048",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1049-2026-11-06",
+      "flightNumber": "LH1049",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "PDX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1050-2026-11-05",
+      "flightNumber": "LH1050",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1051-2026-11-05",
+      "flightNumber": "LH1051",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "PDX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1050-2026-11-06",
+      "flightNumber": "LH1050",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1051-2026-11-06",
+      "flightNumber": "LH1051",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "PDX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1052-2026-11-05",
+      "flightNumber": "LH1052",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "DEN",
+      "departure": "2026-11-05T09:35:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1053-2026-11-05",
+      "flightNumber": "LH1053",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SAN",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:35:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1052-2026-11-06",
+      "flightNumber": "LH1052",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "DEN",
+      "departure": "2026-11-06T09:35:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1053-2026-11-06",
+      "flightNumber": "LH1053",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SAN",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:35:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1054-2026-11-05",
+      "flightNumber": "LH1054",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "DEN",
+      "departure": "2026-11-05T15:35:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1055-2026-11-05",
+      "flightNumber": "LH1055",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "SAN",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:35:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1054-2026-11-06",
+      "flightNumber": "LH1054",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "DEN",
+      "departure": "2026-11-06T15:35:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1055-2026-11-06",
+      "flightNumber": "LH1055",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "SAN",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:35:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1056-2026-11-05",
+      "flightNumber": "LH1056",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "DEN",
+      "departure": "2026-11-05T10:00:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1057-2026-11-05",
+      "flightNumber": "LH1057",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "LAS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:10:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1056-2026-11-06",
+      "flightNumber": "LH1056",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "DEN",
+      "departure": "2026-11-06T10:00:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1057-2026-11-06",
+      "flightNumber": "LH1057",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "LAS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:10:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1058-2026-11-05",
+      "flightNumber": "LH1058",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "DEN",
+      "departure": "2026-11-05T16:00:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1059-2026-11-05",
+      "flightNumber": "LH1059",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "LAS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:10:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1058-2026-11-06",
+      "flightNumber": "LH1058",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "DEN",
+      "departure": "2026-11-06T16:00:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1059-2026-11-06",
+      "flightNumber": "LH1059",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "LAS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:10:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1060-2026-11-05",
+      "flightNumber": "LH1060",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "DEN",
+      "departure": "2026-11-05T08:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1061-2026-11-05",
+      "flightNumber": "LH1061",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MCO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1060-2026-11-06",
+      "flightNumber": "LH1060",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "DEN",
+      "departure": "2026-11-06T08:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1061-2026-11-06",
+      "flightNumber": "LH1061",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MCO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1062-2026-11-05",
+      "flightNumber": "LH1062",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "DEN",
+      "departure": "2026-11-05T14:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1063-2026-11-05",
+      "flightNumber": "LH1063",
+      "date": "2026-11-05",
+      "origin": "DEN",
+      "destination": "MCO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1062-2026-11-06",
+      "flightNumber": "LH1062",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "DEN",
+      "departure": "2026-11-06T14:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1063-2026-11-06",
+      "flightNumber": "LH1063",
+      "date": "2026-11-06",
+      "origin": "DEN",
+      "destination": "MCO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1064-2026-11-05",
+      "flightNumber": "LH1064",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "ATL",
+      "departure": "2026-11-05T07:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1065-2026-11-05",
+      "flightNumber": "LH1065",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "RNO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1064-2026-11-06",
+      "flightNumber": "LH1064",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "ATL",
+      "departure": "2026-11-06T07:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1065-2026-11-06",
+      "flightNumber": "LH1065",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "RNO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1066-2026-11-05",
+      "flightNumber": "LH1066",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "ATL",
+      "departure": "2026-11-05T13:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1067-2026-11-05",
+      "flightNumber": "LH1067",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "RNO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1066-2026-11-06",
+      "flightNumber": "LH1066",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "ATL",
+      "departure": "2026-11-06T13:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1067-2026-11-06",
+      "flightNumber": "LH1067",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "RNO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1068-2026-11-05",
+      "flightNumber": "LH1068",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "ATL",
+      "departure": "2026-11-05T09:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1069-2026-11-05",
+      "flightNumber": "LH1069",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "BOS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1068-2026-11-06",
+      "flightNumber": "LH1068",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "ATL",
+      "departure": "2026-11-06T09:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1069-2026-11-06",
+      "flightNumber": "LH1069",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "BOS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1070-2026-11-05",
+      "flightNumber": "LH1070",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "ATL",
+      "departure": "2026-11-05T15:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1071-2026-11-05",
+      "flightNumber": "LH1071",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "BOS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1070-2026-11-06",
+      "flightNumber": "LH1070",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "ATL",
+      "departure": "2026-11-06T15:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1071-2026-11-06",
+      "flightNumber": "LH1071",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "BOS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1072-2026-11-05",
+      "flightNumber": "LH1072",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "ATL",
+      "departure": "2026-11-05T06:45:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T06:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1073-2026-11-05",
+      "flightNumber": "LH1073",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SEA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T18:25:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1072-2026-11-06",
+      "flightNumber": "LH1072",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "ATL",
+      "departure": "2026-11-06T06:45:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T06:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1073-2026-11-06",
+      "flightNumber": "LH1073",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SEA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T18:25:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1074-2026-11-05",
+      "flightNumber": "LH1074",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "ATL",
+      "departure": "2026-11-05T12:45:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T12:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1075-2026-11-05",
+      "flightNumber": "LH1075",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SEA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-06T00:25:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1074-2026-11-06",
+      "flightNumber": "LH1074",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "ATL",
+      "departure": "2026-11-06T12:45:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T12:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1075-2026-11-06",
+      "flightNumber": "LH1075",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SEA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-07T00:25:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1076-2026-11-05",
+      "flightNumber": "LH1076",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "ATL",
+      "departure": "2026-11-05T09:55:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1077-2026-11-05",
+      "flightNumber": "LH1077",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "ORD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:15:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1076-2026-11-06",
+      "flightNumber": "LH1076",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "ATL",
+      "departure": "2026-11-06T09:55:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1077-2026-11-06",
+      "flightNumber": "LH1077",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "ORD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:15:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1078-2026-11-05",
+      "flightNumber": "LH1078",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "ATL",
+      "departure": "2026-11-05T15:55:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1079-2026-11-05",
+      "flightNumber": "LH1079",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "ORD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:15:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1078-2026-11-06",
+      "flightNumber": "LH1078",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "ATL",
+      "departure": "2026-11-06T15:55:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1079-2026-11-06",
+      "flightNumber": "LH1079",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "ORD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:15:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1080-2026-11-05",
+      "flightNumber": "LH1080",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "ATL",
+      "departure": "2026-11-05T07:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1081-2026-11-05",
+      "flightNumber": "LH1081",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "LAX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1080-2026-11-06",
+      "flightNumber": "LH1080",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "ATL",
+      "departure": "2026-11-06T07:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1081-2026-11-06",
+      "flightNumber": "LH1081",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "LAX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1082-2026-11-05",
+      "flightNumber": "LH1082",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "ATL",
+      "departure": "2026-11-05T13:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1083-2026-11-05",
+      "flightNumber": "LH1083",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "LAX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1082-2026-11-06",
+      "flightNumber": "LH1082",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "ATL",
+      "departure": "2026-11-06T13:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1083-2026-11-06",
+      "flightNumber": "LH1083",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "LAX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1084-2026-11-05",
+      "flightNumber": "LH1084",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "ATL",
+      "departure": "2026-11-05T06:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T06:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1085-2026-11-05",
+      "flightNumber": "LH1085",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SFO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T18:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1084-2026-11-06",
+      "flightNumber": "LH1084",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "ATL",
+      "departure": "2026-11-06T06:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T06:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1085-2026-11-06",
+      "flightNumber": "LH1085",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SFO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T18:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1086-2026-11-05",
+      "flightNumber": "LH1086",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "ATL",
+      "departure": "2026-11-05T12:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T12:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1087-2026-11-05",
+      "flightNumber": "LH1087",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SFO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-06T00:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1086-2026-11-06",
+      "flightNumber": "LH1086",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "ATL",
+      "departure": "2026-11-06T12:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T12:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1087-2026-11-06",
+      "flightNumber": "LH1087",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SFO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-07T00:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1088-2026-11-05",
+      "flightNumber": "LH1088",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "ATL",
+      "departure": "2026-11-05T09:45:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1089-2026-11-05",
+      "flightNumber": "LH1089",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "JFK",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:25:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1088-2026-11-06",
+      "flightNumber": "LH1088",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "ATL",
+      "departure": "2026-11-06T09:45:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1089-2026-11-06",
+      "flightNumber": "LH1089",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "JFK",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:25:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1090-2026-11-05",
+      "flightNumber": "LH1090",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "ATL",
+      "departure": "2026-11-05T15:45:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1091-2026-11-05",
+      "flightNumber": "LH1091",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "JFK",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:25:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1090-2026-11-06",
+      "flightNumber": "LH1090",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "ATL",
+      "departure": "2026-11-06T15:45:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1091-2026-11-06",
+      "flightNumber": "LH1091",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "JFK",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:25:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1092-2026-11-05",
+      "flightNumber": "LH1092",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "ATL",
+      "departure": "2026-11-05T09:45:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1093-2026-11-05",
+      "flightNumber": "LH1093",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "DFW",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:25:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1092-2026-11-06",
+      "flightNumber": "LH1092",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "ATL",
+      "departure": "2026-11-06T09:45:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1093-2026-11-06",
+      "flightNumber": "LH1093",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "DFW",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:25:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1094-2026-11-05",
+      "flightNumber": "LH1094",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "ATL",
+      "departure": "2026-11-05T15:45:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1095-2026-11-05",
+      "flightNumber": "LH1095",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "DFW",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:25:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1094-2026-11-06",
+      "flightNumber": "LH1094",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "ATL",
+      "departure": "2026-11-06T15:45:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1095-2026-11-06",
+      "flightNumber": "LH1095",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "DFW",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:25:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1096-2026-11-05",
+      "flightNumber": "LH1096",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "ATL",
+      "departure": "2026-11-05T10:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1097-2026-11-05",
+      "flightNumber": "LH1097",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MIA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1096-2026-11-06",
+      "flightNumber": "LH1096",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "ATL",
+      "departure": "2026-11-06T10:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1097-2026-11-06",
+      "flightNumber": "LH1097",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MIA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1098-2026-11-05",
+      "flightNumber": "LH1098",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "ATL",
+      "departure": "2026-11-05T16:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1099-2026-11-05",
+      "flightNumber": "LH1099",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MIA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1098-2026-11-06",
+      "flightNumber": "LH1098",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "ATL",
+      "departure": "2026-11-06T16:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1099-2026-11-06",
+      "flightNumber": "LH1099",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MIA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1100-2026-11-05",
+      "flightNumber": "LH1100",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "ATL",
+      "departure": "2026-11-05T09:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1101-2026-11-05",
+      "flightNumber": "LH1101",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MSP",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1100-2026-11-06",
+      "flightNumber": "LH1100",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "ATL",
+      "departure": "2026-11-06T09:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1101-2026-11-06",
+      "flightNumber": "LH1101",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MSP",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1102-2026-11-05",
+      "flightNumber": "LH1102",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "ATL",
+      "departure": "2026-11-05T15:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1103-2026-11-05",
+      "flightNumber": "LH1103",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MSP",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1102-2026-11-06",
+      "flightNumber": "LH1102",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "ATL",
+      "departure": "2026-11-06T15:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1103-2026-11-06",
+      "flightNumber": "LH1103",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MSP",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1104-2026-11-05",
+      "flightNumber": "LH1104",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "ATL",
+      "departure": "2026-11-05T07:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1105-2026-11-05",
+      "flightNumber": "LH1105",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "PHX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1104-2026-11-06",
+      "flightNumber": "LH1104",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "ATL",
+      "departure": "2026-11-06T07:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1105-2026-11-06",
+      "flightNumber": "LH1105",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "PHX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1106-2026-11-05",
+      "flightNumber": "LH1106",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "ATL",
+      "departure": "2026-11-05T13:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1107-2026-11-05",
+      "flightNumber": "LH1107",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "PHX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1106-2026-11-06",
+      "flightNumber": "LH1106",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "ATL",
+      "departure": "2026-11-06T13:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1107-2026-11-06",
+      "flightNumber": "LH1107",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "PHX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1108-2026-11-05",
+      "flightNumber": "LH1108",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "ATL",
+      "departure": "2026-11-05T10:10:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1109-2026-11-05",
+      "flightNumber": "LH1109",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "IAD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:00:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1108-2026-11-06",
+      "flightNumber": "LH1108",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "ATL",
+      "departure": "2026-11-06T10:10:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1109-2026-11-06",
+      "flightNumber": "LH1109",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "IAD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:00:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1110-2026-11-05",
+      "flightNumber": "LH1110",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "ATL",
+      "departure": "2026-11-05T16:10:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1111-2026-11-05",
+      "flightNumber": "LH1111",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "IAD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:00:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1110-2026-11-06",
+      "flightNumber": "LH1110",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "ATL",
+      "departure": "2026-11-06T16:10:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1111-2026-11-06",
+      "flightNumber": "LH1111",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "IAD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:00:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1112-2026-11-05",
+      "flightNumber": "LH1112",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "ATL",
+      "departure": "2026-11-05T06:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T06:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1113-2026-11-05",
+      "flightNumber": "LH1113",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "PDX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T18:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1112-2026-11-06",
+      "flightNumber": "LH1112",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "ATL",
+      "departure": "2026-11-06T06:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T06:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1113-2026-11-06",
+      "flightNumber": "LH1113",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "PDX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T18:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1114-2026-11-05",
+      "flightNumber": "LH1114",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "ATL",
+      "departure": "2026-11-05T12:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T12:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1115-2026-11-05",
+      "flightNumber": "LH1115",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "PDX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-06T00:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1114-2026-11-06",
+      "flightNumber": "LH1114",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "ATL",
+      "departure": "2026-11-06T12:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T12:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1115-2026-11-06",
+      "flightNumber": "LH1115",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "PDX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-07T00:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1116-2026-11-05",
+      "flightNumber": "LH1116",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "ATL",
+      "departure": "2026-11-05T07:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1117-2026-11-05",
+      "flightNumber": "LH1117",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SAN",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1116-2026-11-06",
+      "flightNumber": "LH1116",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "ATL",
+      "departure": "2026-11-06T07:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1117-2026-11-06",
+      "flightNumber": "LH1117",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SAN",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1118-2026-11-05",
+      "flightNumber": "LH1118",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "ATL",
+      "departure": "2026-11-05T13:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1119-2026-11-05",
+      "flightNumber": "LH1119",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "SAN",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1118-2026-11-06",
+      "flightNumber": "LH1118",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "ATL",
+      "departure": "2026-11-06T13:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1119-2026-11-06",
+      "flightNumber": "LH1119",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "SAN",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1120-2026-11-05",
+      "flightNumber": "LH1120",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "ATL",
+      "departure": "2026-11-05T07:30:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1121-2026-11-05",
+      "flightNumber": "LH1121",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "LAS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:40:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1120-2026-11-06",
+      "flightNumber": "LH1120",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "ATL",
+      "departure": "2026-11-06T07:30:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1121-2026-11-06",
+      "flightNumber": "LH1121",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "LAS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:40:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1122-2026-11-05",
+      "flightNumber": "LH1122",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "ATL",
+      "departure": "2026-11-05T13:30:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1123-2026-11-05",
+      "flightNumber": "LH1123",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "LAS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:40:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1122-2026-11-06",
+      "flightNumber": "LH1122",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "ATL",
+      "departure": "2026-11-06T13:30:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1123-2026-11-06",
+      "flightNumber": "LH1123",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "LAS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:40:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1124-2026-11-05",
+      "flightNumber": "LH1124",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "ATL",
+      "departure": "2026-11-05T10:30:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1125-2026-11-05",
+      "flightNumber": "LH1125",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MCO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:40:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1124-2026-11-06",
+      "flightNumber": "LH1124",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "ATL",
+      "departure": "2026-11-06T10:30:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1125-2026-11-06",
+      "flightNumber": "LH1125",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MCO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:40:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1126-2026-11-05",
+      "flightNumber": "LH1126",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "ATL",
+      "departure": "2026-11-05T16:30:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1127-2026-11-05",
+      "flightNumber": "LH1127",
+      "date": "2026-11-05",
+      "origin": "ATL",
+      "destination": "MCO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:40:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1126-2026-11-06",
+      "flightNumber": "LH1126",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "ATL",
+      "departure": "2026-11-06T16:30:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1127-2026-11-06",
+      "flightNumber": "LH1127",
+      "date": "2026-11-06",
+      "origin": "ATL",
+      "destination": "MCO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:40:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1128-2026-11-05",
+      "flightNumber": "LH1128",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:35:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1129-2026-11-05",
+      "flightNumber": "LH1129",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "RNO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:35:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1128-2026-11-06",
+      "flightNumber": "LH1128",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:35:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1129-2026-11-06",
+      "flightNumber": "LH1129",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "RNO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:35:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1130-2026-11-05",
+      "flightNumber": "LH1130",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:35:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1131-2026-11-05",
+      "flightNumber": "LH1131",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "RNO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:35:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1130-2026-11-06",
+      "flightNumber": "LH1130",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:35:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1131-2026-11-06",
+      "flightNumber": "LH1131",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "RNO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:35:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1132-2026-11-05",
+      "flightNumber": "LH1132",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "SLC",
+      "departure": "2026-11-05T07:30:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1133-2026-11-05",
+      "flightNumber": "LH1133",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "BOS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:40:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1132-2026-11-06",
+      "flightNumber": "LH1132",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "SLC",
+      "departure": "2026-11-06T07:30:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1133-2026-11-06",
+      "flightNumber": "LH1133",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "BOS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:40:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1134-2026-11-05",
+      "flightNumber": "LH1134",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "SLC",
+      "departure": "2026-11-05T13:30:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1135-2026-11-05",
+      "flightNumber": "LH1135",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "BOS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:40:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1134-2026-11-06",
+      "flightNumber": "LH1134",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "SLC",
+      "departure": "2026-11-06T13:30:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1135-2026-11-06",
+      "flightNumber": "LH1135",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "BOS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:40:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1136-2026-11-05",
+      "flightNumber": "LH1136",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "SLC",
+      "departure": "2026-11-05T09:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1137-2026-11-05",
+      "flightNumber": "LH1137",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SEA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1136-2026-11-06",
+      "flightNumber": "LH1136",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "SLC",
+      "departure": "2026-11-06T09:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1137-2026-11-06",
+      "flightNumber": "LH1137",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SEA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1138-2026-11-05",
+      "flightNumber": "LH1138",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "SLC",
+      "departure": "2026-11-05T15:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1139-2026-11-05",
+      "flightNumber": "LH1139",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SEA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1138-2026-11-06",
+      "flightNumber": "LH1138",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "SLC",
+      "departure": "2026-11-06T15:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1139-2026-11-06",
+      "flightNumber": "LH1139",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SEA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1140-2026-11-05",
+      "flightNumber": "LH1140",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "SLC",
+      "departure": "2026-11-05T09:00:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1141-2026-11-05",
+      "flightNumber": "LH1141",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "ORD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:10:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1140-2026-11-06",
+      "flightNumber": "LH1140",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "SLC",
+      "departure": "2026-11-06T09:00:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1141-2026-11-06",
+      "flightNumber": "LH1141",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "ORD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:10:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1142-2026-11-05",
+      "flightNumber": "LH1142",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "SLC",
+      "departure": "2026-11-05T15:00:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1143-2026-11-05",
+      "flightNumber": "LH1143",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "ORD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:10:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1142-2026-11-06",
+      "flightNumber": "LH1142",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "SLC",
+      "departure": "2026-11-06T15:00:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1143-2026-11-06",
+      "flightNumber": "LH1143",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "ORD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:10:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1144-2026-11-05",
+      "flightNumber": "LH1144",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1145-2026-11-05",
+      "flightNumber": "LH1145",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "LAX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1144-2026-11-06",
+      "flightNumber": "LH1144",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1145-2026-11-06",
+      "flightNumber": "LH1145",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "LAX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1146-2026-11-05",
+      "flightNumber": "LH1146",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1147-2026-11-05",
+      "flightNumber": "LH1147",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "LAX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1146-2026-11-06",
+      "flightNumber": "LH1146",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1147-2026-11-06",
+      "flightNumber": "LH1147",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "LAX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1148-2026-11-05",
+      "flightNumber": "LH1148",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:00:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1149-2026-11-05",
+      "flightNumber": "LH1149",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SFO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:10:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1148-2026-11-06",
+      "flightNumber": "LH1148",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:00:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1149-2026-11-06",
+      "flightNumber": "LH1149",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SFO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:10:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1150-2026-11-05",
+      "flightNumber": "LH1150",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:00:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1151-2026-11-05",
+      "flightNumber": "LH1151",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SFO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:10:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1150-2026-11-06",
+      "flightNumber": "LH1150",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:00:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1151-2026-11-06",
+      "flightNumber": "LH1151",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SFO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:10:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1152-2026-11-05",
+      "flightNumber": "LH1152",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "SLC",
+      "departure": "2026-11-05T07:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1153-2026-11-05",
+      "flightNumber": "LH1153",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "JFK",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1152-2026-11-06",
+      "flightNumber": "LH1152",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "SLC",
+      "departure": "2026-11-06T07:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1153-2026-11-06",
+      "flightNumber": "LH1153",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "JFK",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1154-2026-11-05",
+      "flightNumber": "LH1154",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "SLC",
+      "departure": "2026-11-05T13:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1155-2026-11-05",
+      "flightNumber": "LH1155",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "JFK",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1154-2026-11-06",
+      "flightNumber": "LH1154",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "SLC",
+      "departure": "2026-11-06T13:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1155-2026-11-06",
+      "flightNumber": "LH1155",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "JFK",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1156-2026-11-05",
+      "flightNumber": "LH1156",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "SLC",
+      "departure": "2026-11-05T09:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1157-2026-11-05",
+      "flightNumber": "LH1157",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "DFW",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1156-2026-11-06",
+      "flightNumber": "LH1156",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "SLC",
+      "departure": "2026-11-06T09:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1157-2026-11-06",
+      "flightNumber": "LH1157",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "DFW",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1158-2026-11-05",
+      "flightNumber": "LH1158",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "SLC",
+      "departure": "2026-11-05T15:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1159-2026-11-05",
+      "flightNumber": "LH1159",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "DFW",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1158-2026-11-06",
+      "flightNumber": "LH1158",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "SLC",
+      "departure": "2026-11-06T15:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1159-2026-11-06",
+      "flightNumber": "LH1159",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "DFW",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1160-2026-11-05",
+      "flightNumber": "LH1160",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "SLC",
+      "departure": "2026-11-05T07:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1161-2026-11-05",
+      "flightNumber": "LH1161",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MIA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1160-2026-11-06",
+      "flightNumber": "LH1160",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "SLC",
+      "departure": "2026-11-06T07:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1161-2026-11-06",
+      "flightNumber": "LH1161",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MIA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1162-2026-11-05",
+      "flightNumber": "LH1162",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "SLC",
+      "departure": "2026-11-05T13:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1163-2026-11-05",
+      "flightNumber": "LH1163",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MIA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1162-2026-11-06",
+      "flightNumber": "LH1162",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "SLC",
+      "departure": "2026-11-06T13:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1163-2026-11-06",
+      "flightNumber": "LH1163",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MIA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1164-2026-11-05",
+      "flightNumber": "LH1164",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "SLC",
+      "departure": "2026-11-05T09:35:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1165-2026-11-05",
+      "flightNumber": "LH1165",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MSP",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:35:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1164-2026-11-06",
+      "flightNumber": "LH1164",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "SLC",
+      "departure": "2026-11-06T09:35:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1165-2026-11-06",
+      "flightNumber": "LH1165",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MSP",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:35:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1166-2026-11-05",
+      "flightNumber": "LH1166",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "SLC",
+      "departure": "2026-11-05T15:35:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1167-2026-11-05",
+      "flightNumber": "LH1167",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MSP",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:35:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1166-2026-11-06",
+      "flightNumber": "LH1166",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "SLC",
+      "departure": "2026-11-06T15:35:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1167-2026-11-06",
+      "flightNumber": "LH1167",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MSP",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:35:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1168-2026-11-05",
+      "flightNumber": "LH1168",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1169-2026-11-05",
+      "flightNumber": "LH1169",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "PHX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1168-2026-11-06",
+      "flightNumber": "LH1168",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1169-2026-11-06",
+      "flightNumber": "LH1169",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "PHX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1170-2026-11-05",
+      "flightNumber": "LH1170",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1171-2026-11-05",
+      "flightNumber": "LH1171",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "PHX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1170-2026-11-06",
+      "flightNumber": "LH1170",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1171-2026-11-06",
+      "flightNumber": "LH1171",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "PHX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1172-2026-11-05",
+      "flightNumber": "LH1172",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "SLC",
+      "departure": "2026-11-05T07:55:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1173-2026-11-05",
+      "flightNumber": "LH1173",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "IAD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:15:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1172-2026-11-06",
+      "flightNumber": "LH1172",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "SLC",
+      "departure": "2026-11-06T07:55:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1173-2026-11-06",
+      "flightNumber": "LH1173",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "IAD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:15:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1174-2026-11-05",
+      "flightNumber": "LH1174",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "SLC",
+      "departure": "2026-11-05T13:55:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1175-2026-11-05",
+      "flightNumber": "LH1175",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "IAD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:15:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1174-2026-11-06",
+      "flightNumber": "LH1174",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "SLC",
+      "departure": "2026-11-06T13:55:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1175-2026-11-06",
+      "flightNumber": "LH1175",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "IAD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:15:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1176-2026-11-05",
+      "flightNumber": "LH1176",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "SLC",
+      "departure": "2026-11-05T09:55:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1177-2026-11-05",
+      "flightNumber": "LH1177",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "PDX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:15:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1176-2026-11-06",
+      "flightNumber": "LH1176",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "SLC",
+      "departure": "2026-11-06T09:55:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1177-2026-11-06",
+      "flightNumber": "LH1177",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "PDX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:15:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1178-2026-11-05",
+      "flightNumber": "LH1178",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "SLC",
+      "departure": "2026-11-05T15:55:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1179-2026-11-05",
+      "flightNumber": "LH1179",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "PDX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:15:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1178-2026-11-06",
+      "flightNumber": "LH1178",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "SLC",
+      "departure": "2026-11-06T15:55:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1179-2026-11-06",
+      "flightNumber": "LH1179",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "PDX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:15:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1180-2026-11-05",
+      "flightNumber": "LH1180",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:00:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1181-2026-11-05",
+      "flightNumber": "LH1181",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SAN",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:10:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1180-2026-11-06",
+      "flightNumber": "LH1180",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:00:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1181-2026-11-06",
+      "flightNumber": "LH1181",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SAN",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:10:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1182-2026-11-05",
+      "flightNumber": "LH1182",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:00:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1183-2026-11-05",
+      "flightNumber": "LH1183",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "SAN",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:10:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1182-2026-11-06",
+      "flightNumber": "LH1182",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:00:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:45:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1183-2026-11-06",
+      "flightNumber": "LH1183",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "SAN",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:10:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1184-2026-11-05",
+      "flightNumber": "LH1184",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "SLC",
+      "departure": "2026-11-05T10:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1185-2026-11-05",
+      "flightNumber": "LH1185",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "LAS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1184-2026-11-06",
+      "flightNumber": "LH1184",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "SLC",
+      "departure": "2026-11-06T10:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1185-2026-11-06",
+      "flightNumber": "LH1185",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "LAS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1186-2026-11-05",
+      "flightNumber": "LH1186",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "SLC",
+      "departure": "2026-11-05T16:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1187-2026-11-05",
+      "flightNumber": "LH1187",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "LAS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1186-2026-11-06",
+      "flightNumber": "LH1186",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "SLC",
+      "departure": "2026-11-06T16:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1187-2026-11-06",
+      "flightNumber": "LH1187",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "LAS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1188-2026-11-05",
+      "flightNumber": "LH1188",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "SLC",
+      "departure": "2026-11-05T07:35:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1189-2026-11-05",
+      "flightNumber": "LH1189",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MCO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:35:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1188-2026-11-06",
+      "flightNumber": "LH1188",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "SLC",
+      "departure": "2026-11-06T07:35:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1189-2026-11-06",
+      "flightNumber": "LH1189",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MCO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:35:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1190-2026-11-05",
+      "flightNumber": "LH1190",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "SLC",
+      "departure": "2026-11-05T13:35:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1191-2026-11-05",
+      "flightNumber": "LH1191",
+      "date": "2026-11-05",
+      "origin": "SLC",
+      "destination": "MCO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:35:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1190-2026-11-06",
+      "flightNumber": "LH1190",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "SLC",
+      "departure": "2026-11-06T13:35:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:20:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1191-2026-11-06",
+      "flightNumber": "LH1191",
+      "date": "2026-11-06",
+      "origin": "SLC",
+      "destination": "MCO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:35:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1192-2026-11-05",
+      "flightNumber": "LH1192",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:45:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1193-2026-11-05",
+      "flightNumber": "LH1193",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "RNO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:25:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1192-2026-11-06",
+      "flightNumber": "LH1192",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:45:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1193-2026-11-06",
+      "flightNumber": "LH1193",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "RNO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:25:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1194-2026-11-05",
+      "flightNumber": "LH1194",
+      "date": "2026-11-05",
+      "origin": "RNO",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:45:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1195-2026-11-05",
+      "flightNumber": "LH1195",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "RNO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:25:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1194-2026-11-06",
+      "flightNumber": "LH1194",
+      "date": "2026-11-06",
+      "origin": "RNO",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:45:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:30:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1195-2026-11-06",
+      "flightNumber": "LH1195",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "RNO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:25:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1196-2026-11-05",
+      "flightNumber": "LH1196",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "DTW",
+      "departure": "2026-11-05T10:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1197-2026-11-05",
+      "flightNumber": "LH1197",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "BOS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1196-2026-11-06",
+      "flightNumber": "LH1196",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "DTW",
+      "departure": "2026-11-06T10:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1197-2026-11-06",
+      "flightNumber": "LH1197",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "BOS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1198-2026-11-05",
+      "flightNumber": "LH1198",
+      "date": "2026-11-05",
+      "origin": "BOS",
+      "destination": "DTW",
+      "departure": "2026-11-05T16:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1199-2026-11-05",
+      "flightNumber": "LH1199",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "BOS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1198-2026-11-06",
+      "flightNumber": "LH1198",
+      "date": "2026-11-06",
+      "origin": "BOS",
+      "destination": "DTW",
+      "departure": "2026-11-06T16:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1199-2026-11-06",
+      "flightNumber": "LH1199",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "BOS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1200-2026-11-05",
+      "flightNumber": "LH1200",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1201-2026-11-05",
+      "flightNumber": "LH1201",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SEA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1200-2026-11-06",
+      "flightNumber": "LH1200",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1201-2026-11-06",
+      "flightNumber": "LH1201",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SEA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1202-2026-11-05",
+      "flightNumber": "LH1202",
+      "date": "2026-11-05",
+      "origin": "SEA",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1203-2026-11-05",
+      "flightNumber": "LH1203",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SEA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1202-2026-11-06",
+      "flightNumber": "LH1202",
+      "date": "2026-11-06",
+      "origin": "SEA",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1203-2026-11-06",
+      "flightNumber": "LH1203",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SEA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1204-2026-11-05",
+      "flightNumber": "LH1204",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "DTW",
+      "departure": "2026-11-05T10:40:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1205-2026-11-05",
+      "flightNumber": "LH1205",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "ORD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:30:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1204-2026-11-06",
+      "flightNumber": "LH1204",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "DTW",
+      "departure": "2026-11-06T10:40:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1205-2026-11-06",
+      "flightNumber": "LH1205",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "ORD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:30:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1206-2026-11-05",
+      "flightNumber": "LH1206",
+      "date": "2026-11-05",
+      "origin": "ORD",
+      "destination": "DTW",
+      "departure": "2026-11-05T16:40:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1207-2026-11-05",
+      "flightNumber": "LH1207",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "ORD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:30:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1206-2026-11-06",
+      "flightNumber": "LH1206",
+      "date": "2026-11-06",
+      "origin": "ORD",
+      "destination": "DTW",
+      "departure": "2026-11-06T16:40:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:25:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1207-2026-11-06",
+      "flightNumber": "LH1207",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "ORD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:30:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1208-2026-11-05",
+      "flightNumber": "LH1208",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1209-2026-11-05",
+      "flightNumber": "LH1209",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "LAX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1208-2026-11-06",
+      "flightNumber": "LH1208",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1209-2026-11-06",
+      "flightNumber": "LH1209",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "LAX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1210-2026-11-05",
+      "flightNumber": "LH1210",
+      "date": "2026-11-05",
+      "origin": "LAX",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1211-2026-11-05",
+      "flightNumber": "LH1211",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "LAX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1210-2026-11-06",
+      "flightNumber": "LH1210",
+      "date": "2026-11-06",
+      "origin": "LAX",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1211-2026-11-06",
+      "flightNumber": "LH1211",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "LAX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1212-2026-11-05",
+      "flightNumber": "LH1212",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1213-2026-11-05",
+      "flightNumber": "LH1213",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SFO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1212-2026-11-06",
+      "flightNumber": "LH1212",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1213-2026-11-06",
+      "flightNumber": "LH1213",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SFO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1214-2026-11-05",
+      "flightNumber": "LH1214",
+      "date": "2026-11-05",
+      "origin": "SFO",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1215-2026-11-05",
+      "flightNumber": "LH1215",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SFO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1214-2026-11-06",
+      "flightNumber": "LH1214",
+      "date": "2026-11-06",
+      "origin": "SFO",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1215-2026-11-06",
+      "flightNumber": "LH1215",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SFO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1216-2026-11-05",
+      "flightNumber": "LH1216",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "DTW",
+      "departure": "2026-11-05T10:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1217-2026-11-05",
+      "flightNumber": "LH1217",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "JFK",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1216-2026-11-06",
+      "flightNumber": "LH1216",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "DTW",
+      "departure": "2026-11-06T10:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1217-2026-11-06",
+      "flightNumber": "LH1217",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "JFK",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1218-2026-11-05",
+      "flightNumber": "LH1218",
+      "date": "2026-11-05",
+      "origin": "JFK",
+      "destination": "DTW",
+      "departure": "2026-11-05T16:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1219-2026-11-05",
+      "flightNumber": "LH1219",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "JFK",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1218-2026-11-06",
+      "flightNumber": "LH1218",
+      "date": "2026-11-06",
+      "origin": "JFK",
+      "destination": "DTW",
+      "departure": "2026-11-06T16:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1219-2026-11-06",
+      "flightNumber": "LH1219",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "JFK",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1220-2026-11-05",
+      "flightNumber": "LH1220",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "DTW",
+      "departure": "2026-11-05T09:05:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1221-2026-11-05",
+      "flightNumber": "LH1221",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "DFW",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:05:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1220-2026-11-06",
+      "flightNumber": "LH1220",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "DTW",
+      "departure": "2026-11-06T09:05:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1221-2026-11-06",
+      "flightNumber": "LH1221",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "DFW",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:05:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1222-2026-11-05",
+      "flightNumber": "LH1222",
+      "date": "2026-11-05",
+      "origin": "DFW",
+      "destination": "DTW",
+      "departure": "2026-11-05T15:05:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1223-2026-11-05",
+      "flightNumber": "LH1223",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "DFW",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:05:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1222-2026-11-06",
+      "flightNumber": "LH1222",
+      "date": "2026-11-06",
+      "origin": "DFW",
+      "destination": "DTW",
+      "departure": "2026-11-06T15:05:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:50:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1223-2026-11-06",
+      "flightNumber": "LH1223",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "DFW",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:05:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1224-2026-11-05",
+      "flightNumber": "LH1224",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "DTW",
+      "departure": "2026-11-05T08:55:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T08:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1225-2026-11-05",
+      "flightNumber": "LH1225",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MIA",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T16:15:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1224-2026-11-06",
+      "flightNumber": "LH1224",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "DTW",
+      "departure": "2026-11-06T08:55:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T08:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1225-2026-11-06",
+      "flightNumber": "LH1225",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MIA",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T16:15:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1226-2026-11-05",
+      "flightNumber": "LH1226",
+      "date": "2026-11-05",
+      "origin": "MIA",
+      "destination": "DTW",
+      "departure": "2026-11-05T14:55:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T14:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1227-2026-11-05",
+      "flightNumber": "LH1227",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MIA",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T22:15:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1226-2026-11-06",
+      "flightNumber": "LH1226",
+      "date": "2026-11-06",
+      "origin": "MIA",
+      "destination": "DTW",
+      "departure": "2026-11-06T14:55:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T14:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1227-2026-11-06",
+      "flightNumber": "LH1227",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MIA",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T22:15:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1228-2026-11-05",
+      "flightNumber": "LH1228",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "DTW",
+      "departure": "2026-11-05T10:15:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1229-2026-11-05",
+      "flightNumber": "LH1229",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MSP",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:55:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1228-2026-11-06",
+      "flightNumber": "LH1228",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "DTW",
+      "departure": "2026-11-06T10:15:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1229-2026-11-06",
+      "flightNumber": "LH1229",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MSP",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:55:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1230-2026-11-05",
+      "flightNumber": "LH1230",
+      "date": "2026-11-05",
+      "origin": "MSP",
+      "destination": "DTW",
+      "departure": "2026-11-05T16:15:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1231-2026-11-05",
+      "flightNumber": "LH1231",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MSP",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:55:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1230-2026-11-06",
+      "flightNumber": "LH1230",
+      "date": "2026-11-06",
+      "origin": "MSP",
+      "destination": "DTW",
+      "departure": "2026-11-06T16:15:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:00:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1231-2026-11-06",
+      "flightNumber": "LH1231",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MSP",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:55:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1232-2026-11-05",
+      "flightNumber": "LH1232",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:50:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1233-2026-11-05",
+      "flightNumber": "LH1233",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "PHX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:20:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1232-2026-11-06",
+      "flightNumber": "LH1232",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:50:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1233-2026-11-06",
+      "flightNumber": "LH1233",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "PHX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:20:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1234-2026-11-05",
+      "flightNumber": "LH1234",
+      "date": "2026-11-05",
+      "origin": "PHX",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:50:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1235-2026-11-05",
+      "flightNumber": "LH1235",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "PHX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:20:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1234-2026-11-06",
+      "flightNumber": "LH1234",
+      "date": "2026-11-06",
+      "origin": "PHX",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:50:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:35:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1235-2026-11-06",
+      "flightNumber": "LH1235",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "PHX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:20:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1236-2026-11-05",
+      "flightNumber": "LH1236",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "DTW",
+      "departure": "2026-11-05T10:30:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T10:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1237-2026-11-05",
+      "flightNumber": "LH1237",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "IAD",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T14:40:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1236-2026-11-06",
+      "flightNumber": "LH1236",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "DTW",
+      "departure": "2026-11-06T10:30:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T10:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1237-2026-11-06",
+      "flightNumber": "LH1237",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "IAD",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T14:40:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1238-2026-11-05",
+      "flightNumber": "LH1238",
+      "date": "2026-11-05",
+      "origin": "IAD",
+      "destination": "DTW",
+      "departure": "2026-11-05T16:30:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T16:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1239-2026-11-05",
+      "flightNumber": "LH1239",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "IAD",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T20:40:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1238-2026-11-06",
+      "flightNumber": "LH1238",
+      "date": "2026-11-06",
+      "origin": "IAD",
+      "destination": "DTW",
+      "departure": "2026-11-06T16:30:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T16:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1239-2026-11-06",
+      "flightNumber": "LH1239",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "IAD",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T20:40:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1240-2026-11-05",
+      "flightNumber": "LH1240",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:20:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1241-2026-11-05",
+      "flightNumber": "LH1241",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "PDX",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:50:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1240-2026-11-06",
+      "flightNumber": "LH1240",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:20:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1241-2026-11-06",
+      "flightNumber": "LH1241",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "PDX",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:50:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1242-2026-11-05",
+      "flightNumber": "LH1242",
+      "date": "2026-11-05",
+      "origin": "PDX",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:20:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1243-2026-11-05",
+      "flightNumber": "LH1243",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "PDX",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:50:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1242-2026-11-06",
+      "flightNumber": "LH1242",
+      "date": "2026-11-06",
+      "origin": "PDX",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:20:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:05:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1243-2026-11-06",
+      "flightNumber": "LH1243",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "PDX",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:50:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1244-2026-11-05",
+      "flightNumber": "LH1244",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:30:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1245-2026-11-05",
+      "flightNumber": "LH1245",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SAN",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:40:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1244-2026-11-06",
+      "flightNumber": "LH1244",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:30:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1245-2026-11-06",
+      "flightNumber": "LH1245",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SAN",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:40:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1246-2026-11-05",
+      "flightNumber": "LH1246",
+      "date": "2026-11-05",
+      "origin": "SAN",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:30:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1247-2026-11-05",
+      "flightNumber": "LH1247",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "SAN",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:40:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1246-2026-11-06",
+      "flightNumber": "LH1246",
+      "date": "2026-11-06",
+      "origin": "SAN",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:30:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:15:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1247-2026-11-06",
+      "flightNumber": "LH1247",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "SAN",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:40:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1248-2026-11-05",
+      "flightNumber": "LH1248",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "DTW",
+      "departure": "2026-11-05T07:55:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T07:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1249-2026-11-05",
+      "flightNumber": "LH1249",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "LAS",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T17:15:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1248-2026-11-06",
+      "flightNumber": "LH1248",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "DTW",
+      "departure": "2026-11-06T07:55:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T07:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1249-2026-11-06",
+      "flightNumber": "LH1249",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "LAS",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T17:15:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1250-2026-11-05",
+      "flightNumber": "LH1250",
+      "date": "2026-11-05",
+      "origin": "LAS",
+      "destination": "DTW",
+      "departure": "2026-11-05T13:55:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T13:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1251-2026-11-05",
+      "flightNumber": "LH1251",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "LAS",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T23:15:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1250-2026-11-06",
+      "flightNumber": "LH1250",
+      "date": "2026-11-06",
+      "origin": "LAS",
+      "destination": "DTW",
+      "departure": "2026-11-06T13:55:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T13:40:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1251-2026-11-06",
+      "flightNumber": "LH1251",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "LAS",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T23:15:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1252-2026-11-05",
+      "flightNumber": "LH1252",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "DTW",
+      "departure": "2026-11-05T09:25:00Z",
+      "arrival": "2026-11-05T12:00:00Z",
+      "boardingCloses": "2026-11-05T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1253-2026-11-05",
+      "flightNumber": "LH1253",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MCO",
+      "departure": "2026-11-05T13:10:00Z",
+      "arrival": "2026-11-05T15:45:00Z",
+      "boardingCloses": "2026-11-05T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1252-2026-11-06",
+      "flightNumber": "LH1252",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "DTW",
+      "departure": "2026-11-06T09:25:00Z",
+      "arrival": "2026-11-06T12:00:00Z",
+      "boardingCloses": "2026-11-06T09:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1253-2026-11-06",
+      "flightNumber": "LH1253",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MCO",
+      "departure": "2026-11-06T13:10:00Z",
+      "arrival": "2026-11-06T15:45:00Z",
+      "boardingCloses": "2026-11-06T12:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1254-2026-11-05",
+      "flightNumber": "LH1254",
+      "date": "2026-11-05",
+      "origin": "MCO",
+      "destination": "DTW",
+      "departure": "2026-11-05T15:25:00Z",
+      "arrival": "2026-11-05T18:00:00Z",
+      "boardingCloses": "2026-11-05T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1255-2026-11-05",
+      "flightNumber": "LH1255",
+      "date": "2026-11-05",
+      "origin": "DTW",
+      "destination": "MCO",
+      "departure": "2026-11-05T19:10:00Z",
+      "arrival": "2026-11-05T21:45:00Z",
+      "boardingCloses": "2026-11-05T18:55:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1254-2026-11-06",
+      "flightNumber": "LH1254",
+      "date": "2026-11-06",
+      "origin": "MCO",
+      "destination": "DTW",
+      "departure": "2026-11-06T15:25:00Z",
+      "arrival": "2026-11-06T18:00:00Z",
+      "boardingCloses": "2026-11-06T15:10:00Z"
+    },
+    "seats": 300
+  },
+  {
+    "flight": {
+      "flightKey": "LH1255-2026-11-06",
+      "flightNumber": "LH1255",
+      "date": "2026-11-06",
+      "origin": "DTW",
+      "destination": "MCO",
+      "departure": "2026-11-06T19:10:00Z",
+      "arrival": "2026-11-06T21:45:00Z",
+      "boardingCloses": "2026-11-06T18:55:00Z"
+    },
+    "seats": 300
+  }
+]

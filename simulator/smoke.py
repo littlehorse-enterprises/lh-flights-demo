@@ -1,119 +1,129 @@
 #!/usr/bin/env python3
-"""Run the accelerated simulator and validate connectors and business outcomes."""
+"""Real end-to-end acceptance check. Run against a fresh stack with RESPONSE_SECONDS=15."""
 
-import argparse
-import json
-import subprocess
-import sys
-import time
-import urllib.error
-import urllib.request
-
-
-CONNECTORS = ("pickups", "overfilled-cans", "no-service-events", "service-exceptions", "customer-responses")
-SCENARIO_CUSTOMERS = {f"customer-demo-{number:03d}" for number in range(1, 7)}
-RESPONDED_CUSTOMERS = {"customer-demo-002", "customer-demo-003", "customer-demo-004", "customer-demo-005"}
-
-
-def get_json(url, timeout=5.0):
-    request = urllib.request.Request(url, headers={"Accept": "application/json"})
-    try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
-            return json.loads(response.read())
-    except (urllib.error.HTTPError, urllib.error.URLError, json.JSONDecodeError) as error:
-        raise RuntimeError(f"GET {url} failed: {error}") from error
-
-
-def validate_connectors(connect_url):
-    problems = []
-    for name in CONNECTORS:
-        status = get_json(f"{connect_url.rstrip('/')}/connectors/{name}/status")
-        connector_state = status.get("connector", {}).get("state")
-        task_states = [task.get("state") for task in status.get("tasks", [])]
-        if connector_state != "RUNNING" or not task_states or any(state != "RUNNING" for state in task_states):
-            problems.append(f"{name}: connector={connector_state}, tasks={task_states}")
-    if problems:
-        raise RuntimeError("connectors are not healthy: " + "; ".join(problems))
-
-
-def validate_outcomes(base_url):
-    deadline = time.monotonic() + 15
-    outcomes = None
-    activity = []
-    while time.monotonic() < deadline:
-        outcomes = get_json(f"{base_url.rstrip('/')}/api/outcomes")
-        activity = get_json(f"{base_url.rstrip('/')}/api/activity")
-        if outcomes.get("failedServicesRecovered", 0) >= 1:
-            break
-        time.sleep(1)
-
-    minimums = {
-        "trucksSimulated": 100,
-        "serviceEventsProcessed": 100,
-        "exceptionsDetected": 6,
-        "interactionsWithoutPhoneCall": 4,
-        "correctivePickupsSold": 3,
-        "additionalTrashPurchases": 1,
-        "incrementalRevenue": 76,
-        "failedServicesRecovered": 1,
-        "ledgerEntries": 5,
-    }
-    failures = [
-        f"{field}={outcomes.get(field, 0)} (expected >= {minimum})"
-        for field, minimum in minimums.items()
-        if outcomes.get(field, 0) < minimum
-    ]
-    represented = {item.get("customerId") for item in activity}
-    missing = sorted(SCENARIO_CUSTOMERS - represented)
-    if missing:
-        failures.append("activity missing deterministic customers: " + ", ".join(missing))
-    responded = {item.get("customerId") for item in activity if item.get("type") == "customer-response"}
-    missing_responses = sorted(RESPONDED_CUSTOMERS - responded)
-    if missing_responses:
-        failures.append("customer responses missing from activity: " + ", ".join(missing_responses))
-    if not any(
-        item.get("customerId") == "customer-demo-002"
-        and item.get("type") == "dispatch"
-        and "next-day" in item.get("detail", "")
-        for item in activity
-    ):
-        failures.append("tag purchase did not produce a next-day dispatch")
-    if not any(
-        item.get("customerId") == "customer-demo-006"
-        and item.get("type") == "revenue"
-        and "overfill-fee" in item.get("detail", "")
-        for item in activity
-    ):
-        failures.append("fee assessment did not produce an invoice")
-    if failures:
-        raise RuntimeError("outcome validation failed: " + "; ".join(failures))
-    return outcomes
-
-
-def parse_args():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--duration", type=int, default=75, help="accelerated run seconds (default: 75)")
-    parser.add_argument("--base-url", default="http://localhost:8081")
-    parser.add_argument("--connect-url", default="http://localhost:8083")
-    return parser.parse_args()
+import argparse, time, uuid
+from client import request, wait_for
 
 
 def main():
-    args = parse_args()
-    try:
-        get_json(f"{args.base_url.rstrip('/')}/api/outcomes")
-        validate_connectors(args.connect_url)
-        subprocess.run(
-            [sys.executable, __file__.replace("smoke.py", "simulate.py"), "--duration", str(args.duration), "--base-url", args.base_url],
-            check=True,
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--url", default="http://localhost:8081")
+    p.add_argument("--timeout", type=int, default=240)
+    a = p.parse_args()
+    url = a.url
+    token = uuid.uuid4().hex[:8]
+    request(url, "/flights/LH101-2026-11-05/delay", {"minutes": 0})
+    booked = []
+    for i in range(5):
+        item = request(
+            url,
+            "/bookings",
+            {
+                "passengerId": f"p{i+1:03d}",
+                "flightNumbers": ["LH101", "LH220" if i < 3 else "LH250"],
+                "date": "2026-11-05",
+            },
+            key=f"smoke-{token}-{i}",
         )
-        outcomes = validate_outcomes(args.base_url)
-        print("smoke passed: " + json.dumps(outcomes, sort_keys=True))
-        return 0
-    except (RuntimeError, subprocess.CalledProcessError) as error:
-        print(f"smoke failed: {error}", file=sys.stderr)
-        return 1
+        booked.append(item["tripId"])
+    wait_for(
+        lambda: all(
+            any(
+                t["tripId"] == id and t["revision"] == 1 for t in request(url, "/trips")
+            )
+            for id in booked
+        ),
+        "booking output in Streams",
+    )
+    print("PASS booking → LittleHorse output → trip view", flush=True)
+    request(url, "/flights/LH101-2026-11-05/delay", {"minutes": 10})
+    time.sleep(2)
+    assert not any(
+        r["tripId"] in booked for r in request(url, "/connections/at-risk")
+    ), "10-minute delay must be safe"
+    request(url, "/flights/LH101-2026-11-05/delay", {"minutes": 25})
+
+    def pending():
+        proposals = {
+            o["tripId"]: o
+            for o in request(url, "/rebooking-proposals")
+            if o["tripId"] in booked
+        }
+        return (
+            proposals
+            if all(
+                id in proposals and proposals[id]["status"] == "PENDING"
+                for id in booked[:3]
+            )
+            else None
+        )
+
+    offers = wait_for(pending, "Streams → Connect → three recovery offers", timeout=120)
+    assert not any(
+        id in offers for id in booked[3:]
+    ), "Safe SEA passengers received offers"
+    print(
+        "PASS selective connection detection → Connect → recovery workflows", flush=True
+    )
+    accepted = offers[booked[0]]
+    declined = offers[booked[1]]
+    expired = offers[booked[2]]
+    payload = {"accepted": True, "optionId": accepted["recommendedOptionId"]}
+    request(url, f"/rebooking-proposals/{accepted['id']}/response", payload)
+    request(url, f"/rebooking-proposals/{accepted['id']}/response", payload)
+    request(url, f"/rebooking-proposals/{declined['id']}/response", {"accepted": False})
+    wait_for(
+        lambda: request(url, f"/rebooking-proposals/{accepted['id']}")["status"]
+        == "REBOOKED",
+        "confirmed rebooking",
+    )
+    wait_for(
+        lambda: request(url, f"/rebooking-proposals/{declined['id']}")["status"]
+        == "DECLINED",
+        "declined offer",
+    )
+    wait_for(
+        lambda: request(url, f"/rebooking-proposals/{expired['id']}")["status"]
+        == "TIMED_OUT",
+        "LittleHorse response timeout",
+        a.timeout,
+    )
+    trip = request(url, f"/trips/{booked[0]}")
+    assert trip["tripId"] == booked[0] and trip["revision"] == 2
+    assert request(url, f"/trips/{booked[1]}")["revision"] == 1
+    print(
+        "PASS accept, duplicate response, decline, timeout, and preserved PNR",
+        flush=True,
+    )
+    request(url, "/flights/LH101-2026-11-05/delay", {"minutes": 30})
+    time.sleep(2)
+    assert (
+        len(
+            [
+                o
+                for o in request(url, "/rebooking-proposals")
+                if o["tripId"] in booked[:3] and o["revision"] == 1
+            ]
+        )
+        == 3
+    )
+    request(url, f"/trips/{booked[0]}/cancel", {})
+    wait_for(
+        lambda: any(
+            t["tripId"] == booked[0] and t["status"] == "CANCELLED"
+            for t in request(url, "/trips")
+        ),
+        "cancellation output",
+    )
+    wait_for(
+        lambda: all(
+            r["tripId"] != booked[0] for r in request(url, "/connections/at-risk")
+        ),
+        "cancelled trip index cleanup",
+    )
+    print("PASS duplicate delay suppression and cancellation cleanup", flush=True)
+    print("End-to-end smoke passed.", flush=True)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

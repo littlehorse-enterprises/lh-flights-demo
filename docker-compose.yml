@@ -1,6 +1,7 @@
+name: connection-rescue
 services:
   kafka:
-    image: apache/kafka:${KAFKA_VERSION}
+    image: apache/kafka:${KAFKA_VERSION:-4.1.1}
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
@@ -14,101 +15,140 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      CLUSTER_ID: c2VydmljZS1vcHMtZGVtbw
-    ports:
-      - "19092:19092"
+      KAFKA_LOG_DIRS: /var/lib/kafka/data/logs
+      CLUSTER_ID: Y29ubmVjdGlvbi1yZXNjdWU
+    ports: ["19092:19092"]
+    volumes: ["kafka-data:/var/lib/kafka/data"]
     healthcheck:
-      test: /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list"]
       interval: 5s
+      timeout: 10s
+      retries: 30
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: airline
+      POSTGRES_PASSWORD: airline
+      POSTGRES_DB: airline
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./fixtures/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airline"]
+      interval: 3s
       timeout: 5s
-      retries: 20
-
+      retries: 30
   littlehorse:
     build:
       context: .
       dockerfile: littlehorse.Dockerfile
       args:
-        LITTLEHORSE_VERSION: ${LITTLEHORSE_VERSION}
-    image: lh-demo-motive-littlehorse:${LITTLEHORSE_VERSION}
+        LITTLEHORSE_VERSION: ${LITTLEHORSE_VERSION:-1.3.0}
+    image: connection-rescue-littlehorse:${LITTLEHORSE_VERSION:-1.3.0}
     environment:
       LHS_LISTENERS: EXTERNAL:2023,INTERNAL:2024
       LHS_ADVERTISED_LISTENERS: EXTERNAL://localhost:2023,INTERNAL://littlehorse:2024
       LHS_LISTENERS_PROTOCOL_MAP: EXTERNAL:PLAIN,INTERNAL:PLAIN
       LHS_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      LHS_CLUSTER_ID: service-operations-demo
+      LHS_CLUSTER_ID: connection-rescue
+      LHS_CLUSTER_PARTITIONS: "3"
       LHS_INSTANCE_ID: "1"
       LHS_SHOULD_CREATE_TOPICS: "true"
+      LHS_STATE_DIR: /lh-state
       LHC_API_HOST: localhost
       LHC_API_PORT: 2024
       LHC_TENANT_ID: default
-    ports:
-      - "2023:2023"
+    volumes: ["littlehorse-state:/lh-state"]
+    ports: ["2023:2023"]
     depends_on:
-      kafka:
-        condition: service_healthy
+      kafka: {condition: service_healthy}
     healthcheck:
       test: ["CMD", "/usr/local/bin/lhctl", "whoami"]
       interval: 5s
       timeout: 5s
-      retries: 20
-
+      retries: 40
   dashboard:
-    image: ghcr.io/littlehorse-enterprises/littlehorse/lh-dashboard:master
+    image: ghcr.io/littlehorse-enterprises/littlehorse/lh-dashboard:${LITTLEHORSE_VERSION:-1.3.0}
     environment:
       LHC_API_HOST: littlehorse
       LHC_API_PORT: 2024
       LHC_OAUTH_ENABLED: "false"
-    ports:
-      - "3000:3000"
+    ports: ["3000:3000"]
     depends_on:
-      littlehorse:
-        condition: service_healthy
-
-  kafka-connect:
-    image: apache/kafka:${KAFKA_VERSION}
-    command: ["/opt/kafka/bin/connect-distributed.sh", "/etc/kafka/connect-distributed.properties"]
-    ports:
-      - "8083:8083"
-    volumes:
-      - ./plugins/lh-kafka-connect:/usr/local/share/kafka/plugins/lh-kafka-connect:ro
-      - ./connect-distributed.properties:/etc/kafka/connect-distributed.properties:ro
-    depends_on:
-      backend:
-        condition: service_healthy
-      littlehorse:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD-SHELL", "wget --quiet --output-document=/dev/null http://localhost:8083/connectors"]
-      interval: 5s
-      timeout: 5s
-      retries: 20
-
+      littlehorse: {condition: service_healthy}
   backend:
-    build:
-      context: ./backend
+    build: ./backend
     environment:
       LHC_API_HOST: littlehorse
       LHC_API_PORT: 2024
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-    ports:
-      - "8081:8081"
+      DATABASE_URL: jdbc:postgresql://postgres:5432/airline
+      STREAMS_STATE_DIR: /streams-state
+      RULES_ADVISOR_ENABLED: ${RULES_ADVISOR_ENABLED:-true}
+      RESPONSE_SECONDS: ${RESPONSE_SECONDS:-180}
+    volumes: ["streams-state:/streams-state"]
+    ports: ["8081:8081"]
     depends_on:
-      littlehorse:
-        condition: service_healthy
-      kafka:
-        condition: service_healthy
+      postgres: {condition: service_healthy}
+      littlehorse: {condition: service_healthy}
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail --silent http://localhost:8081/api/outcomes >/dev/null"]
+      test: ["CMD-SHELL", "curl --fail --silent http://localhost:8081/q/health/ready >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 20s
+  kafka-connect:
+    image: apache/kafka:${KAFKA_VERSION:-4.1.1}
+    command: ["/opt/kafka/bin/connect-distributed.sh", "/etc/kafka/connect-distributed.properties"]
+    ports: ["8083:8083"]
+    volumes:
+      - ./plugins/lh-kafka-connect:/usr/local/share/kafka/plugins/lh-kafka-connect:ro
+      - ./connect-distributed.properties:/etc/kafka/connect-distributed.properties:ro
+    depends_on:
+      backend: {condition: service_healthy}
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -ec
+        - 'exec 3<>/dev/tcp/localhost/8083; printf "GET /connectors HTTP/1.0\r\n\r\n" >&3; IFS= read -r line <&3; [[ "$$line" == *" 200 "* ]]'
       interval: 5s
       timeout: 5s
       retries: 30
-      start_period: 15s
-
   frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "5173:80"
+    build: ./frontend
+    ports: ["5173:80"]
     depends_on:
-      backend:
-        condition: service_healthy
+      backend: {condition: service_healthy}
+  agent:
+    profiles: ["model"]
+    build:
+      context: .
+      dockerfile: agent.Dockerfile
+      args:
+        AGENT_REVISION: ${AGENT_REVISION:-192c18ca3b282493cb7c402f291fda4034612298}
+    env_file:
+      - path: .agent.env
+        required: false
+    volumes: ["./agent/application.properties:/agent-config/application.properties:ro"]
+    environment:
+      QUARKUS_CONFIG_LOCATIONS: /agent-config/application.properties
+      LHC_API_HOST: littlehorse
+      LHC_API_PORT: 2024
+    depends_on:
+      backend: {condition: service_healthy}
+  ollama:
+    profiles: ["ollama"]
+    image: ollama/ollama:0.11.10
+    volumes: ["ollama-models:/root/.ollama"]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+volumes:
+  kafka-data:
+  postgres-data:
+  littlehorse-state:
+  streams-state:
+  ollama-models:

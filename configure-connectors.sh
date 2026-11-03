@@ -2,6 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR=$(cd "$(dirname "$0")" && pwd)
+if [[ -f "$ROOT_DIR/.env.local" ]]; then set -a; source "$ROOT_DIR/.env.local"; set +a; fi
+
 CONNECT_CONTAINER=$(docker compose --project-directory "$ROOT_DIR" ps -q kafka-connect)
 CONNECT_NETWORK=$(docker inspect --format '{{range $name, $_ := .NetworkSettings.Networks}}{{$name}}{{end}}' "$CONNECT_CONTAINER")
 

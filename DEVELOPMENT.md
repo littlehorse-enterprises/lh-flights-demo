@@ -1,171 +1,74 @@
-# Development Guide
+# Development
 
-The runtime services are containerized. The Python simulator remains a host-side process that sends HTTP events to the Quarkus container.
+Run `./setup.sh` once. It builds Docker images, creates the application topics, enables tenant execution output, registers workflows/tasks/StructDefs, applies the single Connect sink, and loads fixtures.
 
-## First Startup
-
-Run the complete setup from the repository root:
-
-```bash
-./setup.sh
-```
-
-This builds the connector bundle and both application images, starts Compose, creates Kafka topics, and registers the connectors.
-
-Useful URLs:
-
-- Operations UI: `http://localhost:5173`
-- Quarkus API: `http://localhost:8081`
-- LittleHorse Dashboard: `http://localhost:3000`
-- Kafka Connect: `http://localhost:8083`
-
-## Change Backend Code
-
-Changes to Java workflows, task beans, REST resources, or backend configuration require rebuilding the backend image. A plain `docker compose restart backend` only restarts the old image.
+After Java changes:
 
 ```bash
 docker compose build backend
 docker compose up -d --no-deps --wait backend
-```
-
-The Quarkus startup recorder registers annotated workflows, tasks, forms, and StructDefs each time the backend container starts.
-
-For workflow changes, reconfigure connectors if the connector was previously stopped or recreated:
-
-```bash
 ./configure-connectors.sh
 ```
 
-Check registration and startup errors:
-
-```bash
-docker compose logs -f backend
-lhctl get wfSpec contact-customer
-```
-
-## Change Frontend Code
-
-The production UI is built into an Nginx image. Rebuild and recreate only that service:
+After frontend changes:
 
 ```bash
 docker compose build frontend
-docker compose up -d --no-deps --wait frontend
+docker compose up -d --no-deps frontend
 ```
 
-The UI calls the backend through Nginx at `/api`, so no frontend environment change is needed for normal local development.
-
-## Change Compose Configuration
-
-After editing `docker-compose.yml`, Dockerfiles, `connect-distributed.properties`, or service environment variables:
+When using model mode, export settings before calling Compose directly:
 
 ```bash
-docker compose up -d --build --wait
+set -a
+source .env.local
+set +a
+docker compose up -d --build agent
 ```
 
-Use `--force-recreate` when an environment variable or bind mount change is not being picked up:
+The backend uses Java 21 or newer, Gradle 9.1, Quarkus 3.32.3 and LittleHorse Quarkus 1.3.0. The optional agent build uses Java 25. Source is pinned; its LittleHorse dependency is explicitly overridden to 1.3.0. Default Kafka runtime and Streams libraries are 4.1.1.
 
 ```bash
-docker compose up -d --build --force-recreate --wait
+cd backend
+./gradlew spotlessApply test quarkusBuild
+cd ../frontend
+npm ci
+npm run build
 ```
 
-Validate the merged Compose configuration without starting services:
+API operations use business entities. `GET /api/passengers`, `/api/flights`, `/api/trips`, `/api/connections/at-risk` and `/api/rebooking-proposals` power the UI. `POST /api/bookings` accepts passengerId, flightNumbers and date, returns a PNR and workflow ID with HTTP 202, and accepts an optional Idempotency-Key. `POST /api/flights/{flightKey}/delay` accepts a total delay in minutes. `POST /api/rebooking-proposals/{id}/response` accepts accepted and optionId, acknowledges delivery to LittleHorse, and leaves completion to the workflow. `POST /api/trips/{pnr}/cancel` starts a cancellation workflow.
 
 ```bash
-docker compose config --quiet
+curl -f -H 'Content-Type: application/json' -H 'Idempotency-Key: rehearsal-ava' \
+  -d '{"passengerId":"p001","flightNumbers":["LH101","LH220"],"date":"2026-11-05"}' \
+  http://localhost:8081/api/bookings
+curl -f -H 'Content-Type: application/json' -d '{"minutes":25}' \
+  http://localhost:8081/api/flights/LH101-2026-11-05/delay
 ```
 
-## Change Connector Configurations
+A flight instance is flight number plus UTC departure date. Schedule dates are synthetic; no code compares them with the laptop's clock. Response deadlines use actual wall-clock seconds.
 
-Changes to files under `connectors/` do not require a container rebuild. Apply them to the running Kafka Connect service:
-
-```bash
-./configure-connectors.sh
-```
-
-Inspect connector health:
-
-```bash
-curl http://localhost:8083/connectors/pickups/status
-curl http://localhost:8083/connectors/overfilled-cans/status
-curl http://localhost:8083/connectors/no-service-events/status
-curl http://localhost:8083/connectors/service-exceptions/status
-curl http://localhost:8083/connectors/customer-responses/status
-```
-
-Changes to the connector source revision in `.env` require rebuilding the connector bundle. Remove the generated plugin directory and rerun setup:
-
-```bash
-rm -rf plugins/lh-kafka-connect
-./setup.sh
-```
-
-The bundle is built inside Docker; no host Java or Gradle installation is required.
-
-## Run the Simulator
-
-Start the simulator after the backend and connectors are healthy:
-
-```bash
-python3 simulator/simulate.py
-```
-
-Use a shorter run while iterating:
-
-```bash
-python3 simulator/simulate.py --duration 75
-```
-
-The simulator adds a run suffix to event IDs, so repeated runs do not reuse LittleHorse WfRun IDs.
-
-## Verify Changes
-
-Run backend tests locally when Java is available:
-
-```bash
-./backend/gradlew -p backend test
-```
-
-The normal end-to-end verification uses the containerized backend:
-
-```bash
-python3 simulator/smoke.py
-```
-
-The smoke test validates connector health, all six scenarios, customer responses, business counters, user-task recovery, and ledger activity.
-
-## Logs and Inspection
-
-Follow one service:
-
-```bash
-docker compose logs -f backend
-docker compose logs -f kafka-connect
-```
-
-Inspect all service status:
+Check service health, connector task state and the customer-responses topic during a rehearsal:
 
 ```bash
 docker compose ps
+docker compose logs --tail 100 backend kafka-connect littlehorse
+curl -f http://localhost:8081/q/health/ready
+curl -f http://localhost:8083/connectors/broken-connections/status
+docker compose exec kafka /opt/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server kafka:9092 --topic customer-responses --from-beginning
 ```
 
-Search workflow runs:
+Changing schemas requires a fresh database for this demo; there is no migration framework. Use `./cleanup.sh --reset` and `./setup.sh`. Regenerate the checked-in fixture with `python3 fixtures/generate.py`; fixture loading never scrapes a live airline.
+
+The optional browser check runs a small static server and mocks the airline API. It does not require Docker. Install Playwright only when running this check:
 
 ```bash
-lhctl search wfRun contact-customer
-lhctl search wfRun handle-overfilled-can
-lhctl search wfRun handle-no-service
+cd frontend
+npm install --no-save --package-lock=false playwright
+npx playwright install chromium
+npm run build
+node tests/ui-smoke.cjs
 ```
 
-## Reset
-
-Stop containers while preserving their volumes:
-
-```bash
-docker compose down
-```
-
-Remove containers and local Kafka/LittleHorse state for a clean demo:
-
-```bash
-./cleanup.sh
-```
+Set CHROMIUM_EXECUTABLE to an existing Chromium executable if necessary. Run simulator/smoke.py against the real Compose stack to verify service integration.

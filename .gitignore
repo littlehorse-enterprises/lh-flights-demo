@@ -1,15 +1,32 @@
+.env.local
+.env.*.local
+.agent.env
+plugins/*
+!plugins/.gitkeep
+
+# Java and Gradle build output
 .gradle/
-.idea/
 backend/build/
 backend/bin/
-frontend/dist/
+*.class
+
+# Frontend dependencies and generated output
 frontend/node_modules/
+frontend/dist/
 frontend/*.tsbuildinfo
 frontend/vite.config.js
 frontend/vite.config.d.ts
-__pycache__/
-plugins/*
-!plugins/.gitkeep
-*.log
 
-.vscode
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local editor, OS and log files
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*.log

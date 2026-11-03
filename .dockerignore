@@ -1,0 +1,8 @@
+.git
+.agent.env
+.env.local
+plugins
+frontend/node_modules
+frontend/dist
+backend/.gradle
+backend/build

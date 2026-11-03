@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'service-operations-backend'
+rootProject.name = 'connection-rescue'

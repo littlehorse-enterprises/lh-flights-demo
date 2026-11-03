@@ -1,44 +1,54 @@
-export interface Outcomes {
-  trucksSimulated: number
-  serviceEventsProcessed: number
-  exceptionsDetected: number
-  interactionsWithoutPhoneCall: number
-  correctivePickupsSold: number
-  additionalTrashPurchases: number
-  incrementalRevenue: number
-  failedServicesRecovered: number
-  ledgerEntries: number
-  simulationRunning: boolean
-  elapsedSeconds: number
+export interface Flight {
+  flightKey: string;
+  flightNumber: string;
+  date: string;
+  origin: string;
+  destination: string;
+  departure: string;
+  arrival: string;
+  boardingCloses: string;
 }
-
-export interface ActivityItem {
-  id: string
-  time: string
-  type: string
-  title: string
-  detail: string
-  customerId: string
-  truckId: string
-  status: string
+export interface FlightStatus {
+  flight: Flight;
+  delayMinutes: number;
+  sequence: number;
+  seats: number;
 }
-
-export interface TaskField {
-  name: string
-  type: string
-  displayName: string
-  description: string
-  required: boolean
+export interface Passenger {
+  id: string;
+  name: string;
+  preferences: string;
+  allowOvernight: boolean;
 }
-
-export interface UserTask {
-  wfRunId: string
-  userTaskGuid: string
-  formName: string
-  status: string
-  userId: string | null
-  userGroup: string | null
-  notes: string | null
-  scheduledTime: string
-  fields: TaskField[]
+export interface Trip {
+  tripId: string;
+  passengerId: string;
+  revision: number;
+  status: string;
+  legs: Flight[];
+}
+export interface Risk {
+  tripId: string;
+  passengerId: string;
+  revision: number;
+  status: string;
+  slackMinutes: number;
+}
+export interface Itinerary {
+  optionId: string;
+  legs: Flight[];
+  overnight: boolean;
+}
+export interface Proposal {
+  id: string;
+  tripId: string;
+  passengerId: string;
+  revision: number;
+  status: string;
+  deadline: string;
+  workflowId: string;
+  explanation: string;
+  source: string;
+  recommendedOptionId: string;
+  options: Itinerary[];
 }

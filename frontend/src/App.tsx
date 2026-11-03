@@ -1,285 +1,806 @@
-import { useEffect, useRef, useState } from 'react'
-import { Icon } from './icons'
-import type { ActivityItem, Outcomes, UserTask } from './types'
+import { useEffect, useState } from "react";
+import type {
+  FlightStatus,
+  Passenger,
+  Proposal,
+  Risk,
+  Trip,
+  Itinerary,
+} from "./types";
 
-const emptyOutcomes: Outcomes = {
-  trucksSimulated: 0,
-  serviceEventsProcessed: 0,
-  exceptionsDetected: 0,
-  interactionsWithoutPhoneCall: 0,
-  correctivePickupsSold: 0,
-  additionalTrashPurchases: 0,
-  incrementalRevenue: 0,
-  failedServicesRecovered: 0,
-  ledgerEntries: 0,
-  simulationRunning: false,
-  elapsedSeconds: 0,
+async function api<T>(path: string, body?: unknown): Promise<T> {
+  const response = await fetch(
+    `/api${path}`,
+    body === undefined
+      ? {}
+      : {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        },
+  );
+  if (!response.ok)
+    throw new Error(
+      (await response.text()) || `Request failed (${response.status})`,
+    );
+  return response.status === 204 ? (undefined as T) : response.json();
 }
-
-const number = new Intl.NumberFormat('en-US')
-
-async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, {
-    ...init,
-    headers: init?.body ? { 'Content-Type': 'application/json', ...init.headers } : init?.headers,
-  })
-  if (!response.ok) throw new Error(`Request failed (${response.status})`)
-  const body = await response.text()
-  return (body ? JSON.parse(body) : undefined) as T
-}
-
-function formatElapsed(seconds: number) {
-  const safe = Math.max(0, Math.floor(seconds || 0))
-  const minutes = Math.floor(safe / 60)
-  return `${String(minutes).padStart(2, '0')}:${String(safe % 60).padStart(2, '0')}`
-}
-
-function formatTime(value: string) {
-  const date = new Date(value)
-  if (Number.isNaN(date.getTime())) return value || 'Just now'
-  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
-}
-
-function tone(value: string) {
-  const normalized = value.toLowerCase()
-  if (/(fail|error|escalat|exception|urgent)/.test(normalized)) return 'danger'
-  if (/(complete|success|recover|approved|resolved)/.test(normalized)) return 'success'
-  if (/(wait|pending|schedule|assign|claim)/.test(normalized)) return 'warning'
-  return 'info'
-}
-
-function StatusPill({ value }: { value: string }) {
-  return <span className={`status-pill ${tone(value)}`}><i />{value.replaceAll('_', ' ')}</span>
-}
-
-function MetricCard({ label, value, icon, accent, detail }: { label: string; value: string; icon: Parameters<typeof Icon>[0]['name']; accent: string; detail: string }) {
+const time = (s: string) =>
+  new Date(s).toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "UTC",
+  });
+const label = (s: string) => s.replaceAll("_", " ").toLowerCase();
+const workflow = (id: string) =>
+  `${window.location.protocol}//${window.location.hostname}:3000/default/wfRun/${encodeURIComponent(id)}`;
+function Mark() {
   return (
-    <article className="metric-card" style={{ '--accent': accent } as React.CSSProperties}>
-      <div className="metric-top"><span className="metric-icon"><Icon name={icon} /></span><span className="metric-trend"><Icon name="arrow" size={13} /> live</span></div>
-      <strong>{value}</strong>
-      <h3>{label}</h3>
-      <p>{detail}</p>
-    </article>
-  )
+    <span className="brand-mark">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="m3 14 8-3 3-8 2 1-1 7 6 4-1 2-7-2-3 5-2-1 1-5-5 2z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
 }
-
-function isOverfillActivity(item: ActivityItem) {
-  return /overfill|overfilled|additional service tag|policy warning|overfill-fee/i.test(`${item.title} ${item.detail}`)
+function RouteMap({ trips }: { trips: Trip[] }) {
+  const points: Record<string, [number, number]> = {
+    RNO: [100, 100],
+    SLC: [185, 105],
+    DEN: [275, 135],
+    SEA: [100, 35],
+    LAX: [80, 190],
+    SFO: [40, 135],
+    ATL: [510, 240],
+    DTW: [465, 100],
+    ORD: [400, 125],
+    BOS: [635, 85],
+    JFK: [610, 125],
+    DFW: [350, 260],
+    MIA: [570, 310],
+    MSP: [350, 70],
+    PHX: [170, 235],
+    IAD: [565, 170],
+    PDX: [65, 65],
+    SAN: [95, 220],
+    LAS: [145, 170],
+    MCO: [560, 275],
+  };
+  const routes = new Map<string, [string, string]>();
+  for (const t of trips)
+    for (const l of t.legs)
+      routes.set(`${l.origin}-${l.destination}`, [l.origin, l.destination]);
+  if (!routes.size) {
+    routes.set("RNO-DEN", ["RNO", "DEN"]);
+    routes.set("DEN-BOS", ["DEN", "BOS"]);
+    routes.set("DEN-SEA", ["DEN", "SEA"]);
+  }
+  return (
+    <svg
+      className="route-map"
+      viewBox="0 0 700 350"
+      role="img"
+      aria-label="Schematic route map of booked flights"
+    >
+      <defs>
+        <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1" fill="#26354c" />
+        </pattern>
+      </defs>
+      <rect width="700" height="350" fill="url(#dots)" />
+      <path
+        d="M35 50 100 20 230 45 330 40 380 65 460 50 480 80 565 70 620 55 660 90 620 170 565 200 590 320 550 315 505 255 440 265 380 295 335 290 315 260 235 260 170 240 95 235 60 175Z"
+        fill="#152237"
+        stroke="#2c3b53"
+        strokeWidth="1.5"
+      />
+      {[...routes.values()].map(([a, b]) => {
+        const x = points[a],
+          y = points[b];
+        if (!x || !y) return null;
+        return (
+          <path
+            key={`${a}-${b}`}
+            d={`M${x[0]} ${x[1]} Q${(x[0] + y[0]) / 2} ${Math.min(x[1], y[1]) - 35} ${y[0]} ${y[1]}`}
+            fill="none"
+            stroke={a === "RNO" ? "#ffad68" : "#4eb6b8"}
+            strokeWidth="1.5"
+            opacity=".6"
+          />
+        );
+      })}
+      {Object.entries(points)
+        .filter(([city]) => [...routes.values()].some((r) => r.includes(city)))
+        .map(([city, [x, y]]) => (
+          <g key={city}>
+            <circle
+              cx={x}
+              cy={y}
+              r="5"
+              fill={city === "DEN" ? "#ffad68" : "#6ce0da"}
+            />
+            <circle
+              cx={x}
+              cy={y}
+              r="11"
+              fill="none"
+              stroke="#6ce0da"
+              opacity=".2"
+            />
+            <text
+              x={x + 12}
+              y={y + 4}
+              fill="#e8eff9"
+              fontSize="12"
+              fontWeight="600"
+            >
+              {city}
+            </text>
+          </g>
+        ))}
+      <text x="20" y="330" fill="#74859d" fontSize="11">
+        SCHEMATIC · ACTIVE BOOKED ROUTES
+      </text>
+    </svg>
+  );
 }
-
-function isOverfillTask(task: UserTask) {
-  return /overfill|overfilled|additional service tag|policy warning/i.test(`${task.formName} ${task.notes || ''}`)
+function Footer() {
+  return (
+    <footer>
+      <span>Synthetic airline data · Schedule times in UTC</span>
+      <span>Let us love one another. · 1 John 4:7</span>
+    </footer>
+  );
 }
-
-function App() {
-  const [outcomes, setOutcomes] = useState(emptyOutcomes)
-  const [activity, setActivity] = useState<ActivityItem[]>([])
-  const [tasks, setTasks] = useState<UserTask[]>([])
-  const [connected, setConnected] = useState<boolean | null>(null)
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
-  const [selected, setSelected] = useState<UserTask | null>(null)
-  const [operatorId, setOperatorId] = useState(() => localStorage.getItem('service-operator-id') || 'ops-lead')
-  const refreshRef = useRef<() => Promise<void>>(async () => {})
-
+export default function App() {
+  const passengerRoute = window.location.pathname.match(/^\/passenger\/(.+)$/);
+  return passengerRoute ? (
+    <PassengerView id={decodeURIComponent(passengerRoute[1])} />
+  ) : (
+    <Backoffice />
+  );
+}
+function Backoffice() {
+  const [flights, setFlights] = useState<FlightStatus[]>([]),
+    [passengers, setPassengers] = useState<Passenger[]>([]),
+    [trips, setTrips] = useState<Trip[]>([]),
+    [proposals, setProposals] = useState<Proposal[]>([]),
+    [risks, setRisks] = useState<Risk[]>([]);
+  const [error, setError] = useState(""),
+    [selected, setSelected] = useState(""),
+    [minutes, setMinutes] = useState(120),
+    [busy, setBusy] = useState(false),
+    [notice, setNotice] = useState(""),
+    [search, setSearch] = useState("");
   useEffect(() => {
-    let cancelled = false
-    const refresh = async () => {
-      const results = await Promise.allSettled([
-        api<Outcomes>('/api/outcomes'),
-        api<ActivityItem[]>('/api/activity'),
-        api<UserTask[]>('/api/user-tasks'),
-      ])
-      if (cancelled) return
-      const allConnected = results.every((result) => result.status === 'fulfilled')
-      setConnected(allConnected)
-      if (results.some((result) => result.status === 'fulfilled')) setLastUpdated(new Date())
-      if (results[0].status === 'fulfilled') setOutcomes(results[0].value)
-      if (results[1].status === 'fulfilled') setActivity(results[1].value)
-      if (results[2].status === 'fulfilled') {
-        const nextTasks = results[2].value
-        setTasks(nextTasks)
-        setSelected((current) => current ? nextTasks.find((task) => task.userTaskGuid === current.userTaskGuid) ?? null : null)
+    let active = true;
+    async function refresh() {
+      try {
+        const [f, p, t, o, r] = await Promise.all([
+          api<FlightStatus[]>("/flights"),
+          api<Passenger[]>("/passengers"),
+          api<Trip[]>("/trips"),
+          api<Proposal[]>("/rebooking-proposals"),
+          api<Risk[]>("/connections/at-risk"),
+        ]);
+        if (active) {
+          setFlights(f);
+          setPassengers(p);
+          setTrips(t);
+          setProposals(o);
+          setRisks(r);
+          setError("");
+          setSelected(
+            (current) =>
+              current ||
+              f.find((s) => s.flight.flightNumber === "LH101")?.flight
+                .flightKey ||
+              f[0]?.flight.flightKey ||
+              "",
+          );
+        }
+      } catch (e) {
+        if (active) setError((e as Error).message);
       }
     }
-    refreshRef.current = refresh
-    void refresh()
-    const timer = window.setInterval(refresh, 2500)
-    return () => { cancelled = true; window.clearInterval(timer) }
-  }, [])
-
-  const updateOperator = (value: string) => {
-    setOperatorId(value)
-    localStorage.setItem('service-operator-id', value)
-  }
-
-  const openTasks = tasks.filter((task) => !/(done|complete|resolved|cancel)/i.test(task.status))
-  const overfillActivity = activity.filter(isOverfillActivity)
-  const overfillTasks = openTasks.filter(isOverfillTask)
-  const customerUpdates = overfillActivity.filter((item) => /customer/i.test(item.type)).length
-  const feeInvoices = overfillActivity.filter((item) => /overfill-fee/i.test(`${item.title} ${item.detail}`)).length
-
-  return (
-    <div className="app-shell">
-      <header className="topbar">
-        <a className="brand" href="#top" aria-label="Service Operations home">
-          <span className="brand-mark"><span /><span /><span /></span>
-          <span><strong>Service Operations</strong><small>Execution control room</small></span>
-        </a>
-        <div className="topbar-right">
-          <label className="operator-field"><Icon name="user" size={15} /><span>Operator</span><input aria-label="Operator ID" value={operatorId} onChange={(event) => updateOperator(event.target.value)} /></label>
-          <div className={`connection ${connected === false ? 'offline' : ''}`}><i />{connected === null ? 'Connecting' : connected ? 'Live systems' : 'Reconnecting'}</div>
-        </div>
-      </header>
-
-      <main id="top">
-        <section className="hero">
-          <div>
-            <div className="eyebrow"><span>LIVE</span> OVERFILL RESPONSE DESK</div>
-            <h1>Turn an overfilled can<br />into a <em>clear next step.</em></h1>
-            <p>Follow each field report through local policy, customer communication, billing, and corrective service.</p>
-          </div>
-          <div className="run-panel">
-            <div className="run-label"><span className={outcomes.simulationRunning ? 'pulse' : ''} />{outcomes.simulationRunning ? 'Response coverage active' : 'Response desk standing by'}</div>
-            <strong>{formatElapsed(outcomes.elapsedSeconds)}</strong>
-            <small>RUN ELAPSED</small>
-            <div className="run-track"><span style={{ width: `${Math.min(100, (outcomes.elapsedSeconds / 300) * 100)}%` }} /></div>
-            <div className="run-meta"><span>{number.format(overfillActivity.length)} signals in view</span><span>{lastUpdated ? `Updated ${formatTime(lastUpdated.toISOString())}` : 'Awaiting telemetry'}</span></div>
-          </div>
-        </section>
-
-        {connected === false && <div className="connection-banner"><Icon name="alert" />Backend unavailable. Showing the latest data and retrying automatically.</div>}
-
-        <section className="metrics focus-metrics" aria-label="Overfilled container outcomes">
-          <MetricCard label="Reports in view" value={number.format(overfillActivity.length)} icon="alert" accent="#ffbd6a" detail="Overfill-related events in the live stream" />
-          <MetricCard label="Service tags sold" value={number.format(outcomes.additionalTrashPurchases)} icon="spark" accent="#8ca8ff" detail="Accepted additional-capacity offers" />
-          <MetricCard label="Customer messages" value={number.format(customerUpdates)} icon="phone" accent="#66e5bb" detail="Overfill policy and offer messages sent" />
-          <MetricCard label="Fee invoices" value={number.format(feeInvoices)} icon="dollar" accent="#73ef8d" detail="Assessed-fee invoices in the live stream" />
-        </section>
-
-        <section className="workflow-map panel" aria-labelledby="workflow-map-title">
-          <div className="workflow-map-heading">
-            <div><span className="section-kicker">WORKFLOW AT A GLANCE</span><h2 id="workflow-map-title">One report, three policy paths</h2></div>
-            <span className="workflow-start"><Icon name="alert" size={15} />Overfilled container detected</span>
-          </div>
-          <div className="decision-paths">
-            <article className="decision-path warning-path"><span className="path-number">01</span><div><h3>Issue a policy warning</h3><p>Notify the customer and record the decision without holding up the route.</p></div><span className="path-status">WARN</span></article>
-            <article className="decision-path offer-path"><span className="path-number">02</span><div><h3>Offer additional service tags</h3><p>Wait for acceptance, invoice the purchase, then dispatch corrective service.</p></div><span className="path-status">OFFER TAGS</span></article>
-            <article className="decision-path fee-path"><span className="path-number">03</span><div><h3>Assess the local fee</h3><p>Apply the municipality rule and send the overfill invoice for payment.</p></div><span className="path-status">ASSESS FEE</span></article>
-          </div>
-        </section>
-
-        <section className="workspace focus-workspace">
-          <div className="activity-panel panel">
-            <div className="panel-heading">
-              <div><span className="section-kicker">OVERFILL EVENT STREAM</span><h2>Workflow activity</h2></div>
-              <div className="streaming"><i />Streaming</div>
-            </div>
-            <div className="activity-list">
-              {overfillActivity.length === 0 && <Empty icon="alert" title="Waiting for an overfill report" detail="Policy decisions, customer contact, and billing activity will appear here." />}
-              {overfillActivity.slice(0, 18).map((item) => (
-                <article className="activity-row" key={item.id}>
-                  <time>{formatTime(item.time)}</time>
-                  <span className={`activity-node ${tone(`${item.type} ${item.status}`)}`}><Icon name={tone(`${item.type} ${item.status}`) === 'danger' ? 'alert' : tone(`${item.type} ${item.status}`) === 'success' ? 'check' : 'route'} size={16} /></span>
-                  <div className="activity-copy">
-                    <div><h3>{item.title}</h3><StatusPill value={item.status} /></div>
-                    <p>{item.detail}</p>
-                    <small>{item.customerId && <span>Customer {item.customerId}</span>}{item.truckId && <span>Unit {item.truckId}</span>}</small>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <aside className="side-column">
-            <section className="panel inbox-panel">
-              <div className="panel-heading compact">
-                <div><span className="section-kicker">HUMAN IN THE LOOP</span><h2>Overfill reviews</h2></div>
-                <span className="count-badge">{overfillTasks.length}</span>
-              </div>
-              <div className="task-list">
-                {overfillTasks.length === 0 && <Empty icon="inbox" title="No overfill reviews pending" detail="Phone-based customer decisions will appear here when a response is needed." />}
-                {overfillTasks.map((task) => (
-                  <button className="task-card" key={task.userTaskGuid} onClick={() => setSelected(task)}>
-                    <span className={`priority-line ${tone(task.status)}`} />
-                    <span className="task-card-main"><span><StatusPill value={task.status} /><time>{formatTime(task.scheduledTime)}</time></span><strong>{task.formName}</strong><small>{task.userGroup || 'Operations review'} · {task.userId ? `Claimed by ${task.userId}` : 'Unassigned'}</small>{task.notes && <span className="task-note-preview">“{task.notes}”</span>}</span>
-                    <Icon name="arrow" />
-                  </button>
-                ))}
-              </div>
-            </section>
-
-            <section className="panel outcome-panel">
-              <div className="panel-heading compact"><div><span className="section-kicker">OVERFILL OUTCOMES</span><h2>Response summary</h2></div><Icon name="ledger" /></div>
-              <OutcomeRow icon="alert" value={overfillActivity.filter((item) => /policy warning/i.test(`${item.title} ${item.detail}`)).length} label="Warnings delivered" />
-              <OutcomeRow icon="spark" value={outcomes.additionalTrashPurchases} label="Additional tags purchased" />
-              <OutcomeRow icon="dollar" value={feeInvoices} label="Fee invoices sent" />
-              <OutcomeRow icon="ledger" value={overfillActivity.filter((item) => /overfill decision/i.test(`${item.title} ${item.detail}`)).length} label="Decisions recorded" />
-            </section>
-          </aside>
-        </section>
-      </main>
-
-      {selected && <TaskDrawer task={selected} operatorId={operatorId.trim()} onClose={() => setSelected(null)} onChanged={() => refreshRef.current()} />}
-    </div>
-  )
-}
-
-function Empty({ icon, title, detail }: { icon: Parameters<typeof Icon>[0]['name']; title: string; detail: string }) {
-  return <div className="empty"><span><Icon name={icon} size={22} /></span><strong>{title}</strong><p>{detail}</p></div>
-}
-
-function OutcomeRow({ icon, value, label }: { icon: Parameters<typeof Icon>[0]['name']; value: number; label: string }) {
-  return <div className="outcome-row"><span><Icon name={icon} /></span><div><strong>{number.format(value)}</strong><small>{label}</small></div></div>
-}
-
-function TaskDrawer({ task, operatorId, onClose, onChanged }: { task: UserTask; operatorId: string; onClose: () => void; onChanged: () => Promise<void> }) {
-  const [note, setNote] = useState(task.notes || '')
-  const [busy, setBusy] = useState<'claim' | 'approve' | 'escalate' | null>(null)
-  const [error, setError] = useState('')
-  const claimed = Boolean(task.userId?.trim())
-
-  const act = async (action: 'claim' | 'approve' | 'escalate') => {
-    if (!operatorId) { setError('Enter an operator ID before taking action.'); return }
-    if (action === 'escalate' && !note.trim()) { setError('Add a note explaining why this task needs escalation.'); return }
-    setBusy(action)
-    setError('')
+    void refresh();
+    const timer = setInterval(() => void refresh(), 2000);
+    return () => {
+      active = false;
+      clearInterval(timer);
+    };
+  }, []);
+  const people = new Map(passengers.map((p) => [p.id, p])),
+    pending = proposals.filter((p) => p.status === "PENDING"),
+    finished = proposals.filter((p) => p.status !== "PENDING");
+  const activeTrips = trips.filter((t) => t.status === "CONFIRMED"),
+    delayed = flights.filter((f) => f.delayMinutes > 0);
+  const bookedOnFlight = new Map<string, number>();
+  for (const trip of activeTrips)
+    for (const leg of trip.legs)
+      bookedOnFlight.set(
+        leg.flightKey,
+        (bookedOnFlight.get(leg.flightKey) || 0) + 1,
+      );
+  const selectableFlights = [...flights].sort(
+    (a, b) =>
+      (bookedOnFlight.get(b.flight.flightKey) || 0) -
+      (bookedOnFlight.get(a.flight.flightKey) || 0),
+  );
+  const filter = flights.filter((s) =>
+    `${s.flight.flightNumber} ${s.flight.origin} ${s.flight.destination}`
+      .toLowerCase()
+      .includes(search.toLowerCase()),
+  );
+  async function delay() {
+    setBusy(true);
     try {
-      const path = `/api/user-tasks/${encodeURIComponent(task.wfRunId)}/${encodeURIComponent(task.userTaskGuid)}/${action === 'claim' ? 'claim' : 'complete'}`
-      const resultField = task.fields.some((field) => field.name === 'accepted') ? 'accepted' : 'approved'
-      const body = action === 'claim'
-        ? { userId: operatorId }
-        : { userId: operatorId, [resultField]: action === 'approve', note: note.trim() }
-      await api(path, { method: 'POST', body: JSON.stringify(body) })
-      await onChanged()
-      onClose()
-    } catch (reason) {
-      setError(reason instanceof Error ? reason.message : 'Unable to update this task.')
+      await api(`/flights/${encodeURIComponent(selected)}/delay`, { minutes });
+      setNotice(
+        `${selected.split("-")[0]} updated to ${minutes} minutes delay.`,
+      );
+      setError("");
+    } catch (e) {
+      setError((e as Error).message);
     } finally {
-      setBusy(null)
+      setBusy(false);
     }
   }
-
   return (
-    <div className="drawer-layer" role="dialog" aria-modal="true" aria-labelledby="task-title" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
-      <aside className="task-drawer">
-        <header><div><span className="section-kicker">ACTION REQUIRED</span><h2 id="task-title">{task.formName}</h2></div><button className="icon-button" onClick={onClose} aria-label="Close task"><Icon name="x" /></button></header>
-        <div className="drawer-status"><StatusPill value={task.status} /><span><Icon name="clock" size={15} />Scheduled {formatTime(task.scheduledTime)}</span></div>
-
-        <section className="assignment">
-          <span><Icon name="user" /></span>
-          <div><small>ASSIGNMENT</small><strong>{task.userId || 'Unassigned'}</strong><p>{task.userGroup || 'Operations team'}</p></div>
-          {!claimed && <button className="button secondary" disabled={Boolean(busy)} onClick={() => void act('claim')}>{busy === 'claim' ? 'Claiming…' : 'Claim task'}</button>}
-        </section>
-
-        {task.fields?.length > 0 && <section className="task-section"><h3>Review context</h3><div className="field-list">{task.fields.map((field) => <div className="field-row" key={field.name}><div><strong>{field.displayName || field.name}{field.required && <sup>*</sup>}</strong><p>{field.description || 'Review before completing this task.'}</p></div><span>{field.type}</span></div>)}</div></section>}
-
-        <section className="task-section"><div className="notes-heading"><h3>Operator notes</h3><span>Visible in task history</span></div>{task.notes && <div className="existing-note"><small>EXISTING NOTE</small><p>{task.notes}</p></div>}<textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Add decision context or escalation details…" rows={5} /></section>
-
-        {error && <div className="action-error"><Icon name="alert" size={16} />{error}</div>}
-        <footer><button className="button danger-button" disabled={Boolean(busy)} onClick={() => void act('escalate')}><Icon name="alert" size={16} />{busy === 'escalate' ? 'Escalating…' : 'Escalate'}</button><button className="button approve-button" disabled={Boolean(busy)} onClick={() => void act('approve')}><Icon name="check" size={16} />{busy === 'approve' ? 'Approving…' : 'Approve'}</button></footer>
+    <div className="shell">
+      <aside>
+        <a className="wordmark" href="/backoffice">
+          <Mark />
+          <span>
+            CONNECTION
+            <br />
+            <b>RESCUE</b>
+          </span>
+        </a>
+        <div className="nav-label">AIRLINE OPERATIONS</div>
+        <a className="nav-item active" href="/backoffice">
+          <span>◈</span> Control room
+        </a>
+        <div className="aside-bottom">
+          <div className="live-dot" /> Event driven operations
+          <p>Kafka + LittleHorse</p>
+        </div>
       </aside>
+      <main>
+        <header>
+          <div>
+            <p className="eyebrow">
+              NETWORK OPERATIONS / CONNECTION MANAGEMENT
+            </p>
+            <h1>Keep every journey moving.</h1>
+            <p className="muted">
+              From a flight delay to a confirmed new itinerary.
+            </p>
+          </div>
+          <a
+            className="button secondary"
+            href={`${window.location.protocol}//${window.location.hostname}:3000`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Workflow dashboard ↗
+          </a>
+        </header>
+        {error && (
+          <div role="alert" className="alert">
+            {error.slice(0, 240)}
+          </div>
+        )}
+        <section className="metrics">
+          <Metric
+            title="BOOKED TRIPS"
+            value={activeTrips.length}
+            detail="Live from Kafka Streams"
+          />
+          <Metric
+            title="DELAYED FLIGHTS"
+            value={delayed.length}
+            detail="Across the flight network"
+          />
+          <Metric
+            title="AT-RISK CONNECTIONS"
+            value={risks.length}
+            detail="Only impacted passengers"
+          />
+          <Metric
+            title="AWAITING A RESPONSE"
+            value={pending.length}
+            detail="Individual recovery workflows"
+            accent
+          />
+        </section>
+        <div className="network-grid">
+          <section className="panel">
+            <div className="panel-heading">
+              <h2>Network view</h2>
+              <span className="pill">
+                <i /> Live booking view
+              </span>
+            </div>
+            <RouteMap trips={activeTrips} />
+          </section>
+          <section className="panel delay-panel">
+            <p className="eyebrow">FLIGHT OPERATIONS</p>
+            <h2>Inject a delay</h2>
+            <p className="muted">
+              Update a flight’s operational status. Connections are evaluated
+              automatically.
+            </p>
+            <label htmlFor="flight">Flight instance</label>
+            <select
+              id="flight"
+              value={selected}
+              onChange={(e) => setSelected(e.target.value)}
+            >
+              {selectableFlights.map((s) => (
+                <option key={s.flight.flightKey} value={s.flight.flightKey}>
+                  {s.flight.flightNumber} · {s.flight.origin} →{" "}
+                  {s.flight.destination} · {s.flight.date}{" "}
+                  {time(s.flight.departure)} ·{" "}
+                  {bookedOnFlight.get(s.flight.flightKey) || 0} booked
+                </option>
+              ))}
+            </select>
+            <label htmlFor="delay">Total delay</label>
+            <select
+              id="delay"
+              value={minutes}
+              onChange={(e) => setMinutes(Number(e.target.value))}
+            >
+              {[0, 10, 25, 30, 60, 120, 180, 360].map((m) => (
+                <option key={m} value={m}>
+                  {m === 0 ? "Restore on time" : `${m} minutes`}
+                </option>
+              ))}
+            </select>
+            <button
+              className="button primary"
+              onClick={() => void delay()}
+              disabled={busy || !selected}
+            >
+              {busy ? "Publishing…" : "Publish flight status"}
+            </button>
+            <p className="notice" aria-live="polite">
+              {notice ||
+                "Flights with booked trips appear first. Choose one to see affected passengers."}
+            </p>
+          </section>
+        </div>
+        <section className="panel offers">
+          <div className="panel-heading">
+            <div>
+              <h2>
+                Passengers who need a hand{" "}
+                <span className="count">{pending.length}</span>
+              </h2>
+              <p className="muted">
+                Open a passenger view to review and respond to an offer.
+              </p>
+            </div>
+            <span className="eyebrow">REACCOMMODATION DESK</span>
+          </div>
+          {pending.length === 0 ? (
+            <div className="empty">
+              <span className="empty-orbit">↗</span>
+              <h3>Ready when plans change.</h3>
+              <p>
+                Start booking traffic, then publish a delay to see recovery
+                offers here.
+              </p>
+              <code>python3 simulator/simulate.py</code>
+            </div>
+          ) : (
+            <div className="offer-grid">
+              {pending.map((p) => (
+                <a
+                  className="offer-card"
+                  href={`/passenger/${encodeURIComponent(p.id)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={p.id}
+                >
+                  <div className="offer-top">
+                    <span className="avatar">
+                      {(people.get(p.passengerId)?.name || p.passengerId)
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)}
+                    </span>
+                    <span className="badge pending">Awaiting response</span>
+                  </div>
+                  <h3>{people.get(p.passengerId)?.name || p.passengerId}</h3>
+                  <p className="muted">
+                    PNR {p.tripId.toUpperCase()} · {p.source}
+                  </p>
+                  <p className="offer-explanation">{p.explanation}</p>
+                  <div className="card-action">
+                    Open passenger view <span>↗</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
+        </section>
+        <div className="detail-grid">
+          <section className="panel">
+            <div className="panel-heading">
+              <h2>Departure board</h2>
+              <input
+                aria-label="Search flights"
+                placeholder="Search flight or airport"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            <div className="board">
+              <div className="board-row board-label">
+                <span>FLIGHT / DATE</span>
+                <span>ROUTE</span>
+                <span>DEPARTS</span>
+                <span>STATUS</span>
+              </div>
+              {filter.slice(0, 80).map((s) => (
+                <div key={s.flight.flightKey} className="board-row">
+                  <span>
+                    <b>{s.flight.flightNumber}</b>
+                    <small>{s.flight.date}</small>
+                  </span>
+                  <span>
+                    {s.flight.origin} <span className="muted">→</span>{" "}
+                    {s.flight.destination}
+                  </span>
+                  <span>{time(s.flight.departure)}</span>
+                  <span
+                    className={`badge ${s.delayMinutes ? "delayed" : "safe"}`}
+                  >
+                    {s.delayMinutes ? `+${s.delayMinutes} min` : "On time"}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="panel">
+            <div className="panel-heading">
+              <h2>Recent outcomes</h2>
+            </div>
+            <div className="outcomes">
+              {finished.length === 0 ? (
+                <p className="muted">
+                  Accepted, declined and expired offers will appear here.
+                </p>
+              ) : (
+                finished.slice(0, 12).map((p) => (
+                  <div className="outcome" key={p.id}>
+                    <div>
+                      <b>{people.get(p.passengerId)?.name || p.passengerId}</b>
+                      <p>
+                        {p.tripId.toUpperCase()} ·{" "}
+                        <a
+                          href={workflow(p.workflowId)}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          View workflow ↗
+                        </a>
+                      </p>
+                    </div>
+                    <span
+                      className={`badge ${p.status === "REBOOKED" ? "safe" : "delayed"}`}
+                    >
+                      {label(p.status)}
+                    </span>
+                  </div>
+                ))
+              )}
+            </div>
+            <div className="safe-trips">
+              <p className="eyebrow">UNINTERRUPTED JOURNEYS</p>
+              {activeTrips
+                .filter((t) => !risks.some((r) => r.tripId === t.tripId))
+                .slice(0, 6)
+                .map((t) => (
+                  <p key={t.tripId}>
+                    {people.get(t.passengerId)?.name || t.passengerId}
+                    <span>{t.legs.at(-1)?.destination} · on track</span>
+                  </p>
+                ))}
+            </div>
+          </section>
+        </div>
+        <Footer />
+      </main>
     </div>
-  )
+  );
 }
-
-export default App
+function Metric({
+  title,
+  value,
+  detail,
+  accent = false,
+}: {
+  title: string;
+  value: number;
+  detail: string;
+  accent?: boolean;
+}) {
+  return (
+    <div className={`metric ${accent ? "accent" : ""}`}>
+      <p>{title}</p>
+      <strong>{value.toString().padStart(2, "0")}</strong>
+      <span>{detail}</span>
+    </div>
+  );
+}
+function ItineraryCard({
+  option,
+  selected,
+  recommended,
+  onSelect,
+  original,
+}: {
+  option: Itinerary;
+  selected: boolean;
+  recommended: boolean;
+  onSelect: () => void;
+  original?: Trip;
+}) {
+  const firstChanged = option.legs.findIndex(
+    (leg, index) => leg.flightKey !== original?.legs[index]?.flightKey,
+  );
+  const replacement = option.legs.slice(Math.max(0, firstChanged));
+  return (
+    <button
+      className={`itinerary ${selected ? "chosen" : ""}`}
+      onClick={onSelect}
+    >
+      <div className="itinerary-top">
+        <span className="radio" />
+        {recommended ? (
+          <span className="badge safe">Recommended</span>
+        ) : (
+          <span className="muted">Alternative itinerary</span>
+        )}
+        {option.overnight && <span className="badge delayed">Next day</span>}
+      </div>
+      {replacement.map((l) => (
+        <div className="leg" key={l.flightKey}>
+          <div>
+            <strong>{time(l.departure)}</strong>
+            <span>{l.origin}</span>
+          </div>
+          <div className="leg-line">
+            <small>
+              {l.flightNumber} · {l.date}
+            </small>
+            <i />
+          </div>
+          <div>
+            <strong>{time(l.arrival)}</strong>
+            <span>{l.destination}</span>
+          </div>
+        </div>
+      ))}
+    </button>
+  );
+}
+function PassengerView({ id }: { id: string }) {
+  const [proposal, setProposal] = useState<Proposal>(),
+    [person, setPerson] = useState<Passenger>(),
+    [trip, setTrip] = useState<Trip>(),
+    [selected, setSelected] = useState(""),
+    [error, setError] = useState(""),
+    [sent, setSent] = useState(false),
+    [busy, setBusy] = useState(false),
+    [now, setNow] = useState(Date.now());
+  useEffect(() => {
+    let active = true;
+    async function refresh() {
+      try {
+        const p = await api<Proposal>(
+          `/rebooking-proposals/${encodeURIComponent(id)}`,
+        );
+        const [passengers, t] = await Promise.all([
+          api<Passenger[]>("/passengers"),
+          api<Trip>(`/trips/${p.tripId}`),
+        ]);
+        if (active) {
+          setProposal(p);
+          setTrip(t);
+          setPerson(passengers.find((c) => c.id === p.passengerId));
+          setSelected((s) => s || p.recommendedOptionId);
+          setError("");
+        }
+      } catch (e) {
+        if (active) setError((e as Error).message);
+      }
+    }
+    void refresh();
+    const timer = setInterval(() => {
+      setNow(Date.now());
+      void refresh();
+    }, 2000);
+    return () => {
+      active = false;
+      clearInterval(timer);
+    };
+  }, [id]);
+  async function respond(accepted: boolean) {
+    setBusy(true);
+    try {
+      await api(`/rebooking-proposals/${encodeURIComponent(id)}/response`, {
+        accepted,
+        optionId: accepted ? selected : "",
+      });
+      setSent(true);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  const remaining = proposal
+    ? Math.max(0, Math.ceil((Date.parse(proposal.deadline) - now) / 1000))
+    : 0;
+  const open = proposal?.status === "PENDING" && remaining > 0 && !sent;
+  return (
+    <div className="passenger-shell">
+      <nav>
+        <a className="passenger-brand" href="/backoffice">
+          <Mark /> Connection Rescue
+        </a>
+        <span>YOUR JOURNEY, TAKEN CARE OF</span>
+      </nav>
+      <main className="passenger-main">
+        {error && (
+          <div className="alert" role="alert">
+            {error.slice(0, 240)}
+          </div>
+        )}
+        {!proposal ? (
+          <p>Loading your itinerary…</p>
+        ) : (
+          <>
+            <p className="eyebrow">
+              HELLO, {person?.name.toUpperCase() || proposal.passengerId}
+            </p>
+            <h1>
+              {proposal.status === "REBOOKED"
+                ? "You're on your way."
+                : "A change of plans. A way forward."}
+            </h1>
+            <p className="passenger-intro">
+              {proposal.status === "REBOOKED"
+                ? "Your new itinerary is confirmed. Your original confirmation number stays the same."
+                : "Your connection needs a little extra care. We've looked at the alternatives so you can choose what works for you."}
+            </p>
+            <div className="journey-strip">
+              <span>
+                CONFIRMATION <b>{proposal.tripId.toUpperCase()}</b>
+              </span>
+              <span>
+                {trip?.legs
+                  .map((l) => l.origin)
+                  .concat(trip.legs.at(-1)?.destination || "")
+                  .join(" → ")}
+              </span>
+              <a
+                href={workflow(proposal.workflowId)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View workflow ↗
+              </a>
+            </div>
+            <section className="advisor-note">
+              <div className="advisor-symbol">✦</div>
+              <div>
+                <p className="eyebrow">
+                  YOUR REBOOKING ADVISOR · {proposal.source.toUpperCase()}
+                </p>
+                <h2>A recommendation with you in mind.</h2>
+                <p>{proposal.explanation}</p>
+                {person && (
+                  <small>Your preferences: {person.preferences}</small>
+                )}
+              </div>
+            </section>
+            {proposal.status === "PENDING" ? (
+              <>
+                <div className="options-heading">
+                  <h2>Choose your onward journey</h2>
+                  <span className="badge pending">
+                    {Math.floor(remaining / 60)}:
+                    {String(remaining % 60).padStart(2, "0")} remaining
+                  </span>
+                </div>
+                <div className="itinerary-grid">
+                  {proposal.options.map((o) => (
+                    <ItineraryCard
+                      key={o.optionId}
+                      option={o}
+                      original={trip}
+                      selected={selected === o.optionId}
+                      recommended={proposal.recommendedOptionId === o.optionId}
+                      onSelect={() => {
+                        if (open) setSelected(o.optionId);
+                      }}
+                    />
+                  ))}
+                </div>
+                {sent ? (
+                  <div className="confirmation" role="status">
+                    Response delivered. Your booking workflow is processing it…
+                  </div>
+                ) : remaining === 0 ? (
+                  <div className="confirmation">
+                    The response window has closed. Waiting for the workflow’s
+                    final outcome…
+                  </div>
+                ) : (
+                  <div className="decision-bar">
+                    <button
+                      className="button secondary"
+                      disabled={busy || !open}
+                      onClick={() => void respond(false)}
+                    >
+                      Keep my current booking
+                    </button>
+                    <button
+                      className="button primary"
+                      disabled={busy || !open || !selected}
+                      onClick={() => void respond(true)}
+                    >
+                      {busy ? "Sending…" : "Confirm this itinerary"}
+                    </button>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div
+                className={`confirmation ${proposal.status === "REBOOKED" ? "success" : ""}`}
+                role="status"
+              >
+                <h2>
+                  {(
+                    {
+                      REBOOKED: "New itinerary confirmed",
+                      DECLINED: "Your current booking is unchanged",
+                      TIMED_OUT: "The offer has expired",
+                      UNAVAILABLE: "These seats are no longer available",
+                      MANUAL_ASSISTANCE: "Let an airport agent help",
+                      RESOLVED: "Your connection is on track",
+                    } as Record<string, string>
+                  )[proposal.status] || label(proposal.status)}
+                </h2>
+                <p>
+                  {["UNAVAILABLE", "MANUAL_ASSISTANCE", "TIMED_OUT"].includes(
+                    proposal.status,
+                  )
+                    ? "Please contact an airport agent for help with your journey."
+                    : "Thank you. You can review your journey using your original confirmation number."}
+                </p>
+                {proposal.status === "REBOOKED" &&
+                  trip?.legs.map((l) => (
+                    <p key={l.flightKey}>
+                      {l.flightNumber} · {l.origin} → {l.destination} · {l.date}{" "}
+                      · {time(l.departure)} UTC
+                    </p>
+                  ))}
+              </div>
+            )}
+          </>
+        )}
+        <Footer />
+      </main>
+    </div>
+  );
+}
