@@ -127,17 +127,13 @@ against the internal `localhost:2024` listener. The backend depends on this heal
 
 ## Quarkus Extension Patterns
 
-The backend uses `io.littlehorse:littlehorse-quarkus:1.2-SNAPSHOT` from Central Portal snapshots.
+The backend uses `io.littlehorse:littlehorse-quarkus:1.3.0` from Maven Central.
 
 Repositories are configured in `backend/build.gradle`:
 
 ```gradle
 repositories {
     mavenLocal()
-    maven {
-        name = 'Central Portal Snapshots'
-        url = 'https://central.sonatype.com/repository/maven-snapshots/'
-    }
     mavenCentral()
 }
 ```

@@ -18,7 +18,7 @@ The demo simulates 100 trucks, sends webhook events through Kafka, starts Little
 - Docker with Compose
 - Python 3.10 or newer
 
-The first setup builds the struct-capable connector from the source revision pinned in `.env`, compiles Quarkus inside Docker, and starts both application containers. The backend uses the `littlehorse-quarkus:1.2-SNAPSHOT` extension, which auto-registers annotated workflows, task workers, forms, and StructDefs. The Python simulator remains the only non-containerized runtime component.
+The first setup builds the struct-capable connector from the source revision pinned in `.env`, compiles Quarkus inside Docker, and starts both application containers. The backend uses the `littlehorse-quarkus:1.3.0` extension, which auto-registers annotated workflows, task workers, forms, and StructDefs. The Python simulator remains the only non-containerized runtime component.
 
 See [`DEVELOPMENT.md`](DEVELOPMENT.md) for the service-by-service iteration workflow.
 

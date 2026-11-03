@@ -1,4 +1,4 @@
-ARG LITTLEHORSE_VERSION=1.2.0
+ARG LITTLEHORSE_VERSION=1.3.0
 
 FROM ghcr.io/littlehorse-enterprises/littlehorse/lhctl:${LITTLEHORSE_VERSION} AS lhctl
 FROM ghcr.io/littlehorse-enterprises/littlehorse/lh-server:${LITTLEHORSE_VERSION}
