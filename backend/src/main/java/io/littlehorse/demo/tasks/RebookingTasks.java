@@ -25,7 +25,8 @@ public class RebookingTasks {
     }
 
     @LHTaskMethod("prepare-booking")
-    public ReservationRequest prepare(String tripId, String passengerId, String[] flightNumbers, String date) {
+    public ReservationRequest prepare(
+            String tripId, String passengerId, @LHType(isLHArray = true) String[] flightNumbers, String date) {
         return store.initial(tripId, passengerId, flightNumbers, date);
     }
 

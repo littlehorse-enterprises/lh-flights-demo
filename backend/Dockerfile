@@ -2,7 +2,8 @@ FROM gradle:9.1-jdk21 AS build
 
 WORKDIR /workspace
 COPY . .
-RUN gradle quarkusBuild --no-daemon
+RUN --mount=type=cache,target=/home/gradle/.gradle,uid=1000,gid=1000 \
+    gradle quarkusBuild --no-daemon
 
 FROM eclipse-temurin:21-jre-jammy
 

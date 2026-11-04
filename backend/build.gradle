@@ -15,6 +15,8 @@ dependencies {
     implementation 'io.quarkus:quarkus-rest-jackson'
     implementation "io.littlehorse:littlehorse-quarkus:${littlehorseQuarkusVersion}"
     implementation 'org.apache.kafka:kafka-streams:4.1.1'
+    // LittleHorse execution records use LZ4; include the codec in the runtime image.
+    runtimeOnly 'org.lz4:lz4-java:1.8.0'
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'io.quarkus:quarkus-smallrye-health'
     testImplementation 'org.apache.kafka:kafka-streams-test-utils:4.1.1'

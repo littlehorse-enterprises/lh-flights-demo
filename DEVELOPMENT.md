@@ -2,6 +2,30 @@
 
 Run `./setup.sh` once. It builds Docker images, creates the application topics, enables tenant execution output, registers workflows/tasks/StructDefs, applies the single Connect sink, and loads fixtures.
 
+## Architecture
+
+One Quarkus JVM hosts the airline API, task workers, and vanilla Kafka Streams. PostgreSQL owns passengers, schedules, seats, PNRs, proposals, and idempotency receipts. Streams owns queryable trip, flight-status, and connection-risk views. Run a single backend instance; interactive queries do not route across instances.
+
+`booking` and `reaccommodate-customer` call the shared `reserve-itinerary` child workflow, which reserves inventory transactionally and emits a typed `trip-booked` event. Rebooking preserves the PNR. LittleHorse owns the passenger wait and timeout; HTTP delivers a typed correlated event directly. Reservations revalidate inventory after acceptance. Rules and model advisors share a task signature, and ordinary workers validate recommendations.
+
+Streams normalizes native Protobuf execution records into JSON business topics, maintains a partitioned trip store and flight-to-trip index, and reevaluates connections after bookings and status changes. `trip-bookings`, `flight-bookings-internal`, `flight-status-internal`, and `affected-trips` each have three partitions. A compacted `flight-status-view` copy feeds the global store. Missing statuses defer evaluation; triggering observations prevent global-store lag from hiding delays.
+
+One Connect sink consumes `broken-connections`. A stable `wfRunId` header (`recover-{tripId}-v{revision}`) makes repeated risk records idempotent at LittleHorse. Passenger decisions are also emitted as typed workflow events and normalized onto `customer-responses`. Workflow data uses Structs and native arrays; JSON stays at HTTP, Kafka, and database boundaries.
+
+The optional agent uses read-only MCP tools at `/mcp/flight-schedules`. Provider failures or invalid recommendations fall back to deterministic rules. Hotel booking is outside the demo.
+
+## Docker networking
+
+If Docker builds report DNS failures such as `Could not resolve host` while downloads work on the host, fix Docker's DNS configuration. On Linux, you can also use the host network **for builds**:
+
+```bash
+DOCKER_BUILD_NETWORK=host ./setup.sh
+```
+
+This applies to the connector and application builds. Runtime services still use the Compose network.
+
+## Iteration
+
 After Java changes:
 
 ```bash

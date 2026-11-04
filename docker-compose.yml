@@ -77,7 +77,9 @@ services:
     depends_on:
       littlehorse: {condition: service_healthy}
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      network: ${DOCKER_BUILD_NETWORK:-default}
     environment:
       LHC_API_HOST: littlehorse
       LHC_API_PORT: 2024
@@ -116,7 +118,9 @@ services:
       timeout: 5s
       retries: 30
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      network: ${DOCKER_BUILD_NETWORK:-default}
     ports: ["5173:80"]
     depends_on:
       backend: {condition: service_healthy}
@@ -125,6 +129,7 @@ services:
     build:
       context: .
       dockerfile: agent.Dockerfile
+      network: ${DOCKER_BUILD_NETWORK:-default}
       args:
         AGENT_REVISION: ${AGENT_REVISION:-192c18ca3b282493cb7c402f291fda4034612298}
     env_file:

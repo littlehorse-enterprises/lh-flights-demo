@@ -1,50 +1,55 @@
 # Connection Rescue
 
-A small airline operations demo for Current 2026. Kafka Streams finds broken connections; one Kafka Connect sink starts a LittleHorse recovery workflow for each affected booking. A passenger sees an itinerary recommendation, accepts or declines it, and the workflow completes the booking change or times out.
+Try [LittleHorse](https://littlehorse.io) by helping airline passengers recover from missed connections. Book flights, inject a delay, and watch workflows recommend alternatives, wait for each passenger, and complete their rebooking.
 
-The airline data and notifications are synthetic. Kafka, Streams, Connect, PostgreSQL, LittleHorse workflows, correlated events, and configured model calls are real. Schedule times use November 5–6, 2026 UTC. Response deadlines use the actual clock.
+Airline data is synthetic; LittleHorse, Kafka, Kafka Streams, Kafka Connect, and PostgreSQL run locally for real.
 
-## Run
+## 1. Start the demo
 
-Docker with Compose v2 is the only startup prerequisite. Allow about 8 GB of Docker memory; local models need additional memory and disk. First startup downloads images and builds the applications and connector.
+**You need:** a running Docker installation with Compose **v2.30+**, Bash (macOS/Linux or WSL2), and Python **3.10+** for booking traffic. Allocate at least **8 GB RAM** to Docker and keep ports **2023, 3000, 5173, 8081, 8083, 19092** available. Java and Node are built inside Docker.
+
+From this repository's directory:
 
 ```bash
 ./setup.sh
 ```
 
-Choose rules, OpenAI, Anthropic, or a small/4B Qwen model through Ollama. Non-interactive startup defaults to rules. The choice is saved in `.env.local`; credentials live in ignored `.agent.env`. Remove these two files and run setup again to change provider. Model names are editable during setup. Only the selected provider is started. A failed, timed-out or invalid model response falls back to the rules worker.
+Choose **1 — rules** for the simplest first run: no API key or model download required. OpenAI, Anthropic, and local Ollama/Qwen models are optional; local models need extra memory and disk. Your selection and credentials are saved in Git-ignored files and reused on restart.
 
-Open http://localhost:5173/backoffice and start booking traffic:
+First startup downloads dependencies and builds the demo; allow several minutes. Wait until setup prints the application URLs.
+
+## 2. Book, delay, and rescue
+
+1. Open the **[control room](http://localhost:5173/backoffice)**.
+2. In another terminal, from this repository, start bookings:
+
+   ```bash
+   python3 simulator/simulate.py --hub DEN
+   ```
+
+3. Wait for **BOOKED TRIPS** to increase. Under **Inject a delay**, select a flight **arriving in DEN** with booked passengers. Flights with bookings appear first.
+4. Choose **120 minutes**, then **Publish flight status**. Within a few seconds, affected passengers appear under **Passengers who need a hand**. Unaffected trips stay on track.
+5. Open a passenger card and **Confirm this itinerary**. Wait for **New itinerary confirmed**. Try **Keep my current booking** on another card, or leave an offer unanswered to see its **three-minute timeout**.
+6. Click **View workflow** to inspect the execution in the **[LittleHorse Dashboard](http://localhost:3000)**. LittleHorse coordinates the recommendation, passenger wait, and reservation child workflow.
+
+The simulator only books passengers; delays are controlled in the UI. Press **Ctrl-C** to stop booking traffic. Flight schedules use November 5–6, 2026 UTC; response deadlines use the actual clock.
+
+## Stop or start over
 
 ```bash
-python3 simulator/simulate.py
+./cleanup.sh          # Stop; retain bookings and workflow history
+./setup.sh            # Restart
+./cleanup.sh --reset  # Stop and DELETE this demo's data
+./setup.sh            # Start fresh and reload schedules
 ```
 
-The simulator randomly chooses from 500 passengers and connecting itineraries across 524 flight instances. It only submits bookings. It never injects delays. Use `--hub DEN`, `--interval 0.5`, `--count 100`, or `--seed 42` to concentrate or repeat traffic.
+To change advisor, stop the demo, delete `.env.local` and `.agent.env`, then run setup again.
 
-In the back office, choose a flight with booked passengers, set its total delay and publish. A 120-minute delay usually produces several affected bookings. Open a pending passenger card, review the explanation and alternatives, then confirm or decline. Open another passenger card and leave it unanswered to show the three-minute LittleHorse timeout. Safe connections remain visible under uninterrupted journeys. Workflow links open the actual LittleHorse Dashboard at http://localhost:3000.
+## Troubleshooting and verification
 
-For the featured RNO–DEN example, book LH101 with LH220 to BOS or LH250 to SEA using the API. LH101 delayed by 10 minutes keeps both feasible; 25 minutes breaks BOS while SEA remains feasible. The smoke script exercises this exact distinction.
+If startup fails, check `docker compose ps` and `docker compose logs --tail 100 backend kafka-connect littlehorse`. Resolve the reported issue, then rerun `./setup.sh`; setup can be repeated. If no offers appear, check that the selected flight has bookings and arrives at the connection airport.
 
-## How it works
-
-One Quarkus JVM hosts the airline API, normal task workers and vanilla Kafka Streams. PostgreSQL owns passengers, schedules, seats, PNRs and offers. Streams owns the queryable flight, trip and connection-risk views; there is no database-backed Kafka projection. There are seven containers in rules mode: Kafka, LittleHorse, Dashboard, Connect, PostgreSQL, backend and frontend. A configured model adds the agent connector, and Ollama adds one more.
-
-`booking` takes `passengerId`, a native array `flightNumbers`, `date` and the generated `tripId`. Initial booking and `reaccommodate-customer` both call the `reserve-itinerary` child workflow and wait for its result. That workflow emits a typed `trip-booked` event after a successful reservation. Rebooking preserves the PNR. Cancellation emits another booking fact with a new business revision.
-
-Streams decodes native Protobuf output records, converts typed booking events into plain JSON on `trip-bookings`, maintains a partitioned trip store and a flight-to-trip secondary index, and reevaluates affected trips after a booking or status change. `flight-bookings-internal`, `flight-status-internal` and `affected-trips` each have three partitions, matching `trip-bookings`. A compacted internal `flight-status-view` copy feeds the global store: Kafka Streams does not allow a normal source and global source for the same topic in one topology. Affected records carry the triggering observation, and deferred evaluations retry after missing global data catches up.
-
-Only affected passenger/trip pairs go to `broken-connections`. Their `wfRunId` header is `recover-{tripId}-v{bookingRevision}`. Repeated risk records are allowed; Kafka Connect's `RunWf` call uses the same ID and tolerates `ALREADY_EXISTS`. No Streams duplicate-suppression store is needed. A changed booking revision can start a new recovery workflow.
-
-The workflow looks up current booking details and feasible itineraries, obtains a recommendation, validates it, stores an offer, and waits for a typed correlated passenger event. The HTTP response endpoint calls LittleHorse directly. Acceptance is a decision, not a confirmed booking: the child reservation workflow revalidates current inventory and flight delays and commits the seat/itinerary changes in one PostgreSQL transaction. Task receipts and HTTP decision intents make retries safe. Conflicting responses receive HTTP 409. An unavailable itinerary, declined offer, timeout, resolved connection or need for manual assistance has an explicit outcome. Hotels are suggested only as an airport-agent conversation; hotel booking is outside this demo.
-
-Passenger decisions become typed `passenger-decided` workflow events. Streams extracts them to the plain JSON `customer-responses` topic for inspection. Workflow variables, task inputs/outputs and workflow events use LittleHorse Structs and native arrays, never serialized JSON strings.
-
-The optional `lh-agent-connector` uses STRUCT-to-STRUCT mode and read-only MCP tools at `/mcp/flight-schedules`. Rules mode serves the same advisor task signature inside the backend. Only one advisor worker implementation runs at a time. The backend always validates the chosen option and performs reservations.
-
-## Verify and reset
-
-The real end-to-end smoke test requires the running stack. It books five passengers, verifies selective risk detection through Connect, accepts one offer twice, declines another, waits for a third to expire, checks the preserved PNR and updated revision, repeats a delay, then cancels a trip and verifies cleanup. Use a fresh stack and a shorter response window for faster testing:
+For a repeatable end-to-end check (deletes demo data):
 
 ```bash
 ./cleanup.sh --reset
@@ -52,16 +57,6 @@ RESPONSE_SECONDS=15 ./setup.sh
 python3 simulator/smoke.py --timeout 60
 ```
 
-Run `./cleanup.sh` to stop while retaining state. `./cleanup.sh --reset` removes this demo's Kafka, PostgreSQL, LittleHorse and Streams state. Run setup again afterward to reseed. Seeding is repeatable and does not reset seat counts or delays on existing flights.
+Run `./setup.sh` afterward to restore the normal three-minute response window.
 
-```bash
-cd backend
-./gradlew test quarkusBuild
-cd ../frontend
-npm ci
-npm run build
-```
-
-The Java tests cover native Struct serialization, workflow graph compilation, booking-before-delay and delay-before-booking ordering, missing status deferral, selective detection, stable workflow IDs across repeated delays, itinerary revisions, cancellation index cleanup, and output-topic normalization. See DEVELOPMENT.md for iteration commands and VALIDATION.md for the checks performed on this delivery.
-
-This is a local, unauthenticated presentation application. Run a single backend instance: interactive queries aggregate its assigned stores and do not implement routing to other instances. The fixture is an offline synthetic network, not a real airline timetable. Model quality depends on the selected provider; no paid provider is required for the demo.
+See **[DEVELOPMENT.md](DEVELOPMENT.md)** for architecture, API examples, build commands, and Docker networking help; **[VALIDATION.md](VALIDATION.md)** records what has been tested.

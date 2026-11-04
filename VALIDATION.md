@@ -1,11 +1,16 @@
-# Validation of this delivery
+# Validation — November 3, 2026
 
-The backend passes 11 JUnit tests and a complete Quarkus production build against LittleHorse Quarkus 1.3.0. Tests use real RocksDB stores in Kafka Streams TopologyTestDriver and native LittleHorse Struct serialization. They cover workflow graph compilation, event normalization, selective connection detection, both event arrival orders, missing status deferral, stale status/booking updates, booking revisions and cancellation index cleanup. Repeated risk events carry the same workflow ID and rely on RunWf idempotence. Advisor tests cover next-day permission, same-day ordering and no-option assistance.
+Verified on Linux x86-64 with Docker Engine 29.7.2 and Compose 5.5.0, using rules mode.
 
-The frontend passes TypeScript checking and a Vite production build. A headless Chromium check with a mocked airline API verified desktop rendering, flight-delay publication, passenger acceptance and final confirmation, no JavaScript errors, and no horizontal overflow at a 390 px viewport. Both desktop screens were visually inspected. The browser check is in frontend/tests/ui-smoke.cjs; it intentionally tests the UI separately from the real service smoke test.
+- **Setup:** fresh Docker volumes, non-interactive rules selection, connector build from pinned source, plugin export, service startup, connector registration, and fixture loading. Repeated setup/reseeding also tested. This host's Docker build DNS required `DOCKER_BUILD_NETWORK=host`.
+- **Backend:** `./gradlew spotlessApply test quarkusBuild` passes all 12 tests, including a regression check that the booking task accepts a native LittleHorse string array.
+- **Frontend:** `npm ci && npm run build` passes. Mocked browser smoke passes for delay publication, acceptance, and mobile layout.
+- **Real end-to-end smoke:** `python3 simulator/smoke.py --timeout 60` passes with `RESPONSE_SECONDS=15`. Covers booking → workflow output → Streams → Connect → recovery proposals, safe SEA connections, acceptance and duplicate response, decline, timeout, preserved PNR/revision, repeated delays, and cancellation cleanup.
+- **Live Chromium:** the real frontend publishes a delay, displays a recovery proposal, accepts the itinerary, and shows confirmation with booking revision 2. Its workflow link opens the actual LittleHorse Dashboard run. No application JavaScript errors; Dashboard 1.3.0 logs a React hydration warning while rendering the run.
+- **Traffic:** randomized DEN-hub bookings submitted through `simulator/simulate.py`.
+- **Restart:** backend restart retained identical query results for 17 trips, 2 at-risk connections, and 524 flight statuses.
+- **Static checks:** Bash syntax, Python compilation, Compose configuration (rules and model/Ollama profiles), and `git diff --check` pass.
 
-The optional agent connector builds from its pinned source using the explicit LittleHorse 1.3.0 override. The Kafka Connect bundle also builds from pinned source against the 1.3.0 client. The built connector bundle is included under plugins; setup reuses it when its build marker matches. sources.lock records its SHA-256.
+Fixed during runtime verification: missing LZ4 codec for execution records; incorrect JSON-array task signature; HTTP 500 on duplicate correlated events; root-owned exported plugins blocking Linux setup; Python error reporting for failed GET requests. Setup now checks Docker availability before prompting and saves advisor configuration after validating input.
 
-Compose configuration, Bash syntax, Python compilation, git whitespace checks, all 524 unique flight keys, 500 passengers, and 3,974 valid connecting fixture itineraries were checked.
-
-Docker is unavailable in the build environment. The actual Compose stack, PostgreSQL transactions, broker/Connect integration, restart restoration, and full simulator/smoke.py execution have therefore not been verified here. No paid provider or local model was invoked. The supplied smoke script must pass on the presentation machine before the demo is treated as rehearsed.
+OpenAI, Anthropic, and Ollama model execution have not been tested in this verification.

@@ -21,7 +21,7 @@ def request(base, path, payload=None, key=None):
             return json.loads(raw) if raw else None
     except urllib.error.HTTPError as error:
         raise RuntimeError(
-            f"{req.method} {path}: HTTP {error.code}: {error.read().decode()}"
+            f"{req.get_method()} {path}: HTTP {error.code}: {error.read().decode()}"
         ) from error
 
 

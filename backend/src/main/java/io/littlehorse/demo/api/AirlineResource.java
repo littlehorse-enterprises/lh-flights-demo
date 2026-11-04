@@ -157,11 +157,16 @@ public class AirlineResource {
     @Path("/rebooking-proposals/{id}/response")
     public Response respond(@PathParam("id") String id, ResponseRequest request) {
         var decision = store.decision(id, request.accepted(), request.optionId() == null ? "" : request.optionId());
-        client.putCorrelatedEvent(PutCorrelatedEventRequest.newBuilder()
-                .setKey(id)
-                .setExternalEventDefId(ExternalEventDefId.newBuilder().setName("passenger-response"))
-                .setContent(LHLibUtil.objToVarVal(decision))
-                .build());
+        try {
+            client.putCorrelatedEvent(PutCorrelatedEventRequest.newBuilder()
+                    .setKey(id)
+                    .setExternalEventDefId(ExternalEventDefId.newBuilder().setName("passenger-response"))
+                    .setContent(LHLibUtil.objToVarVal(decision))
+                    .build());
+        } catch (StatusRuntimeException e) {
+            // The store rejects conflicting decisions; the same event may already be delivered.
+            if (e.getStatus().getCode() != Status.Code.ALREADY_EXISTS) throw e;
+        }
         return Response.accepted(Map.of("status", "DELIVERED")).build();
     }
 
