@@ -12,15 +12,10 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @LHTask
 public class RebookingTasks {
     final AirlineStore store;
-    final AirlineStreams streams;
     final int responseSeconds;
 
-    public RebookingTasks(
-            AirlineStore store,
-            AirlineStreams streams,
-            @ConfigProperty(name = "airline.response-seconds") int responseSeconds) {
+    public RebookingTasks(AirlineStore store, @ConfigProperty(name = "airline.response-seconds") int responseSeconds) {
         this.store = store;
-        this.streams = streams;
         this.responseSeconds = responseSeconds;
     }
 
@@ -46,11 +41,10 @@ public class RebookingTasks {
         if (trip == null || !trip.getPassengerId().equals(passengerId))
             throw new IllegalArgumentException("Booking not found for passenger");
         var passenger = store.passenger(passengerId);
-        Map<String, FlightStatus> statuses = streams.statusMap();
-        // Defer the task until the queryable view has the complete itinerary.
+        Map<String, FlightStatus> statuses = statusMap();
         for (FlightLeg leg : trip.getLegs())
             if (!statuses.containsKey(leg.getFlightKey()))
-                throw new IllegalStateException("Flight statuses still restoring");
+                throw new IllegalStateException("Flight missing from scheduling database: " + leg.getFlightKey());
         List<Itinerary> options = new ArrayList<>();
         if (!trip.getStatus().equals("CANCELLED")
                 && AirlineTopology.assess(trip, statuses).status().equals("AT_RISK")) {
@@ -182,7 +176,13 @@ public class RebookingTasks {
     boolean isBroken(String id) {
         BookedTrip trip = store.trip(id);
         return !trip.getStatus().equals("CANCELLED")
-                && AirlineTopology.assess(trip, streams.statusMap()).status().equals("AT_RISK");
+                && AirlineTopology.assess(trip, statusMap()).status().equals("AT_RISK");
+    }
+
+    private Map<String, FlightStatus> statusMap() {
+        Map<String, FlightStatus> statuses = new HashMap<>();
+        for (FlightStatus status : store.flights()) statuses.put(status.flight().getFlightKey(), status);
+        return statuses;
     }
 
     @LHTaskMethod("prepare-change")

@@ -4,11 +4,13 @@ Run `./setup.sh` once. It builds Docker images, creates the application topics, 
 
 ## Architecture
 
-One Quarkus JVM hosts the airline API, task workers, and vanilla Kafka Streams. PostgreSQL owns passengers, schedules, seats, PNRs, proposals, and idempotency receipts. Streams owns queryable trip, flight-status, and connection-risk views. Run a single backend instance; interactive queries do not route across instances.
+One Quarkus JVM hosts the airline API, task workers, and vanilla Kafka Streams. PostgreSQL owns passengers, schedules, delays, seats, PNRs, proposals, and idempotency receipts. Workers, the flight API, and the model's schedule tool query PostgreSQL for airline facts. Streams maintains trip, flight-status, and connection-risk views to detect disruptions and serve operational views. Run a single backend instance; interactive queries do not route across instances.
 
 `booking` and `reaccommodate-customer` call the shared `reserve-itinerary` child workflow, which reserves inventory transactionally and emits a typed `trip-booked` event. Rebooking preserves the PNR. LittleHorse owns the passenger wait and timeout; HTTP delivers a typed correlated event directly. Reservations revalidate inventory after acceptance. Rules and model advisors share a task signature, and ordinary workers validate recommendations.
 
 Streams normalizes native Protobuf execution records into JSON business topics, maintains a partitioned trip store and flight-to-trip index, and reevaluates connections after bookings and status changes. `trip-bookings`, `flight-bookings-internal`, `flight-status-internal`, and `affected-trips` each have three partitions. A compacted `flight-status-view` copy feeds the global store. Missing statuses defer evaluation; triggering observations prevent global-store lag from hiding delays.
+
+Flight updates commit to PostgreSQL before the application publishes a status to Kafka. These are separate operations, so a publication failure requires retrying the update; there is no transactional outbox.
 
 One Connect sink consumes `broken-connections`. A stable `wfRunId` header (`recover-{tripId}-v{revision}`) makes repeated risk records idempotent at LittleHorse. Passenger decisions are also emitted as typed workflow events and normalized onto `customer-responses`. Workflow data uses Structs and native arrays; JSON stays at HTTP, Kafka, and database boundaries.
 

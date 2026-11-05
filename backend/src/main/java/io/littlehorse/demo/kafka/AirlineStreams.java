@@ -95,22 +95,12 @@ public class AirlineStreams implements HealthCheck {
         }
     }
 
-    public List<FlightStatus> statuses() {
-        return all("flight-status", FlightStatus.class);
-    }
-
     public List<AirlineTopology.Risk> risks() {
         return all("connection-risk", AirlineTopology.Risk.class);
     }
 
     public List<BookedTrip> trips() {
         return all("trips", BookedTrip.class);
-    }
-
-    public Map<String, FlightStatus> statusMap() {
-        Map<String, FlightStatus> m = new HashMap<>();
-        for (var s : statuses()) m.put(s.flight().getFlightKey(), s);
-        return m;
     }
 
     <T> List<T> all(String store, Class<T> type) {

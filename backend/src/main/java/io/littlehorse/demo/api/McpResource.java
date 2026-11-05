@@ -1,6 +1,5 @@
 package io.littlehorse.demo.api;
 
-import io.littlehorse.demo.kafka.AirlineStreams;
 import io.littlehorse.demo.kafka.Json;
 import io.littlehorse.demo.store.AirlineStore;
 import jakarta.ws.rs.*;
@@ -12,11 +11,9 @@ import java.util.*;
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class McpResource {
-    final AirlineStreams streams;
     final AirlineStore store;
 
-    public McpResource(AirlineStreams streams, AirlineStore store) {
-        this.streams = streams;
+    public McpResource(AirlineStore store) {
         this.store = store;
     }
 
@@ -62,7 +59,7 @@ public class McpResource {
                 Map<?, ?> args = (Map<?, ?>) params.get("arguments");
                 if (args == null) return error(id, -32602, "Arguments required");
                 var inventory = store.inventory();
-                var flights = streams.statuses().stream()
+                var flights = store.flights().stream()
                         .filter(f -> f.flight().getOrigin().equals(args.get("origin"))
                                 && f.flight().getDestination().equals(args.get("destination")))
                         .map(f -> Map.of(

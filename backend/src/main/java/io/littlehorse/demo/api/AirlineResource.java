@@ -44,7 +44,7 @@ public class AirlineResource {
     @Path("/flights")
     public Object flights() {
         var inventory = store.inventory();
-        return streams.statuses().stream()
+        return store.flights().stream()
                 .sorted(Comparator.comparing(FlightStatus::departure))
                 .map(s -> Map.of(
                         "flight",
