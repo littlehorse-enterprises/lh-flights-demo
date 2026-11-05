@@ -5,8 +5,8 @@ cd "$ROOT_DIR"
 command -v docker >/dev/null || { printf 'Install Docker Desktop or Docker Engine with Compose first.\n' >&2; exit 1; }
 docker info >/dev/null 2>&1 || { printf 'Docker is not running or is inaccessible. Start Docker and retry ./setup.sh.\n' >&2; exit 1; }
 docker compose version >/dev/null 2>&1 || { printf 'Docker Compose v2.30+ is required. Update Docker and retry.\n' >&2; exit 1; }
-# Select once; non-interactive runs default to the deterministic worker.
-if [[ ! -f .env.local ]]; then
+# Select on every run; non-interactive runs default to the deterministic worker.
+configure_advisor() {
   choice=1
   if [[ -t 0 ]]; then
     printf 'Advisor: 1) rules (default)  2) OpenAI  3) Anthropic  4) Ollama Qwen 0.6B  5) Ollama Qwen 4B (~3 GB)\n'
@@ -45,7 +45,8 @@ if [[ ! -f .env.local ]]; then
   printf '%s\n' "$agent_config" > .agent.env
   printf 'RULES_ADVISOR_ENABLED=%s\nCOMPOSE_PROFILES=%s\n%s\n' "$rules" "$profiles" "$ollama_config" > .env.local
   unset agent_config
-fi
+}
+configure_advisor
 [[ -f .agent.env ]] || touch .agent.env
 set -a
 source .env
@@ -60,6 +61,8 @@ if [[ ! -f "$PLUGIN_DIR/.build-version" ]] || [[ "$(cat "$PLUGIN_DIR/.build-vers
   docker run --rm --env "OUTPUT_UID=$(id -u)" --env "OUTPUT_GID=$(id -g)" --volume "$ROOT_DIR/plugins:/output" connection-rescue-connect-builder
   printf '%s\n' "$EXPECTED_BUILD" > "$PLUGIN_DIR/.build-version"
 fi
+# Stop the previous advisor, including services outside the newly selected profiles.
+docker compose --profile model --profile ollama stop agent ollama
 if [[ ${COMPOSE_PROFILES:-} == *ollama* ]]; then
   docker compose up -d --wait ollama
   docker compose exec -T ollama ollama pull "$OLLAMA_MODEL"

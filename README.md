@@ -14,7 +14,7 @@ From this repository's directory:
 ./setup.sh
 ```
 
-Choose **1 — rules** for the simplest first run: no API key or model download required. OpenAI, Anthropic, and local Ollama/Qwen models are optional; local models need extra memory and disk. Your selection and credentials are saved in Git-ignored files and reused on restart.
+Choose **1 — rules** for the simplest first run: no API key or model download required. OpenAI, Anthropic, and local Ollama/Qwen models are optional; local models need extra memory and disk. Setup asks you to choose on every run; configuration is written to Git-ignored files for the running services.
 
 First startup downloads dependencies and builds the demo; allow several minutes. Wait until setup prints the application URLs.
 
@@ -37,13 +37,11 @@ The simulator only books passengers; delays are controlled in the UI. Press **Ct
 ## Stop or start over
 
 ```bash
-./cleanup.sh          # Stop; retain bookings and workflow history
-./setup.sh            # Restart
-./cleanup.sh --reset  # Stop and DELETE this demo's data
-./setup.sh            # Start fresh and reload schedules
+./cleanup.sh  # Remove all demo containers, volumes, images, plugins, and local configuration
+./setup.sh    # Start fresh and reload schedules
 ```
 
-To change advisor, stop the demo, delete `.env.local` and `.agent.env`, then run setup again.
+To change advisor, run `./setup.sh` again and choose a different option.
 
 ## Troubleshooting and verification
 
@@ -52,7 +50,7 @@ If startup fails, check `docker compose ps` and `docker compose logs --tail 100 
 For a repeatable end-to-end check (deletes demo data):
 
 ```bash
-./cleanup.sh --reset
+./cleanup.sh
 RESPONSE_SECONDS=15 ./setup.sh
 python3 simulator/smoke.py --timeout 60
 ```
